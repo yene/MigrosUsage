@@ -12,6 +12,7 @@
 		ACF18EF222ECC14300B2A751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF022ECC14300B2A751 /* Main.storyboard */; };
 		ACF18EF422ECC14600B2A751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF322ECC14600B2A751 /* Assets.xcassets */; };
 		ACF18EF722ECC14600B2A751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF522ECC14600B2A751 /* LaunchScreen.storyboard */; };
+		ACF18EFF22ECC41F00B2A751 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EFE22ECC41F00B2A751 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		ACF18EF322ECC14600B2A751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACF18EF622ECC14600B2A751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF18EF822ECC14600B2A751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF18EFE22ECC41F00B2A751 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +56,12 @@
 		ACF18EEB22ECC14300B2A751 /* MigrosUsage */ = {
 			isa = PBXGroup;
 			children = (
+				ACF18EFE22ECC41F00B2A751 /* logo.png */,
 				ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */,
 				ACF18EEE22ECC14300B2A751 /* ViewController.swift */,
 				ACF18EF022ECC14300B2A751 /* Main.storyboard */,
-				ACF18EF322ECC14600B2A751 /* Assets.xcassets */,
 				ACF18EF522ECC14600B2A751 /* LaunchScreen.storyboard */,
+				ACF18EF322ECC14600B2A751 /* Assets.xcassets */,
 				ACF18EF822ECC14600B2A751 /* Info.plist */,
 			);
 			path = MigrosUsage;
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF18EFF22ECC41F00B2A751 /* logo.png in Resources */,
 				ACF18EF722ECC14600B2A751 /* LaunchScreen.storyboard in Resources */,
 				ACF18EF422ECC14600B2A751 /* Assets.xcassets in Resources */,
 				ACF18EF222ECC14300B2A751 /* Main.storyboard in Resources */,
@@ -285,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDJHDNKXD6;
 				INFOPLIST_FILE = MigrosUsage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +297,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDJHDNKXD6;
 				INFOPLIST_FILE = MigrosUsage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
