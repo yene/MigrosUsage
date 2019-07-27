@@ -7,15 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACD89D5A22ECE04600166B04 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD89D4522ECDED000166B04 /* KeychainSwift.framework */; };
+		ACD89D5B22ECE04600166B04 /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACD89D4522ECDED000166B04 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACD89D6022ECE07B00166B04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */; };
 		ACF18EED22ECC14300B2A751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */; };
 		ACF18EEF22ECC14300B2A751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18EEE22ECC14300B2A751 /* ViewController.swift */; };
 		ACF18EF222ECC14300B2A751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF022ECC14300B2A751 /* Main.storyboard */; };
 		ACF18EF422ECC14600B2A751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF322ECC14600B2A751 /* Assets.xcassets */; };
 		ACF18EF722ECC14600B2A751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF522ECC14600B2A751 /* LaunchScreen.storyboard */; };
 		ACF18EFF22ECC41F00B2A751 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EFE22ECC41F00B2A751 /* logo.png */; };
+		ACF18F0722ECC5D400B2A751 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */; };
+		ACF18F0A22ECC5D400B2A751 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18F0922ECC5D400B2A751 /* TodayViewController.swift */; };
+		ACF18F0D22ECC5D400B2A751 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF18F0B22ECC5D400B2A751 /* MainInterface.storyboard */; };
+		ACF18F1122ECC5D400B2A751 /* UsageWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ACF18F0422ECC5D400B2A751 /* UsageWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ACD89D4422ECDED000166B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C96C1B1C118F00FE8090;
+			remoteInfo = KeychainSwift;
+		};
+		ACD89D5C22ECE04600166B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ED6C96B1B1C118F00FE8090;
+			remoteInfo = KeychainSwift;
+		};
+		ACF18F0F22ECC5D400B2A751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACF18EE122ECC14300B2A751 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACF18F0322ECC5D400B2A751;
+			remoteInfo = UsageWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ACD89D5E22ECE04600166B04 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ACD89D5B22ECE04600166B04 /* KeychainSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACF18F1522ECC5D400B2A751 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ACF18F1122ECC5D400B2A751 /* UsageWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "../../Swift/MigrosUsage/MigrosUsage/keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
+		ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACF18EE922ECC14300B2A751 /* MigrosUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MigrosUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF18EEE22ECC14300B2A751 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +82,11 @@
 		ACF18EF622ECC14600B2A751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF18EF822ECC14600B2A751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACF18EFE22ECC41F00B2A751 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		ACF18F0422ECC5D400B2A751 /* UsageWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UsageWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		ACF18F0922ECC5D400B2A751 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		ACF18F0C22ECC5D400B2A751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		ACF18F0E22ECC5D400B2A751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,16 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD89D5A22ECE04600166B04 /* KeychainSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACF18F0122ECC5D400B2A751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF18F0722ECC5D400B2A751 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACD89D3922ECDECF00166B04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACD89D4522ECDED000166B04 /* KeychainSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ACF18EE022ECC14300B2A751 = {
 			isa = PBXGroup;
 			children = (
+				ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */,
 				ACF18EEB22ECC14300B2A751 /* MigrosUsage */,
+				ACF18F0822ECC5D400B2A751 /* UsageWidget */,
+				ACF18F0522ECC5D400B2A751 /* Frameworks */,
 				ACF18EEA22ECC14300B2A751 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				ACF18EE922ECC14300B2A751 /* MigrosUsage.app */,
+				ACF18F0422ECC5D400B2A751 /* UsageWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,12 +143,31 @@
 				ACF18EFE22ECC41F00B2A751 /* logo.png */,
 				ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */,
 				ACF18EEE22ECC14300B2A751 /* ViewController.swift */,
+				ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */,
 				ACF18EF022ECC14300B2A751 /* Main.storyboard */,
 				ACF18EF522ECC14600B2A751 /* LaunchScreen.storyboard */,
 				ACF18EF322ECC14600B2A751 /* Assets.xcassets */,
 				ACF18EF822ECC14600B2A751 /* Info.plist */,
 			);
 			path = MigrosUsage;
+			sourceTree = "<group>";
+		};
+		ACF18F0522ECC5D400B2A751 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACF18F0822ECC5D400B2A751 /* UsageWidget */ = {
+			isa = PBXGroup;
+			children = (
+				ACF18F0922ECC5D400B2A751 /* TodayViewController.swift */,
+				ACF18F0B22ECC5D400B2A751 /* MainInterface.storyboard */,
+				ACF18F0E22ECC5D400B2A751 /* Info.plist */,
+			);
+			path = UsageWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +180,36 @@
 				ACF18EE522ECC14300B2A751 /* Sources */,
 				ACF18EE622ECC14300B2A751 /* Frameworks */,
 				ACF18EE722ECC14300B2A751 /* Resources */,
+				ACF18F1522ECC5D400B2A751 /* Embed App Extensions */,
+				ACD89D5E22ECE04600166B04 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				ACF18F1022ECC5D400B2A751 /* PBXTargetDependency */,
+				ACD89D5D22ECE04600166B04 /* PBXTargetDependency */,
 			);
 			name = MigrosUsage;
 			productName = MigrosUsage;
 			productReference = ACF18EE922ECC14300B2A751 /* MigrosUsage.app */;
 			productType = "com.apple.product-type.application";
+		};
+		ACF18F0322ECC5D400B2A751 /* UsageWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACF18F1222ECC5D400B2A751 /* Build configuration list for PBXNativeTarget "UsageWidget" */;
+			buildPhases = (
+				ACF18F0022ECC5D400B2A751 /* Sources */,
+				ACF18F0122ECC5D400B2A751 /* Frameworks */,
+				ACF18F0222ECC5D400B2A751 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UsageWidget;
+			productName = UsageWidget;
+			productReference = ACF18F0422ECC5D400B2A751 /* UsageWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +222,9 @@
 				ORGANIZATIONNAME = yannick.dev;
 				TargetAttributes = {
 					ACF18EE822ECC14300B2A751 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					ACF18F0322ECC5D400B2A751 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
@@ -113,12 +240,29 @@
 			mainGroup = ACF18EE022ECC14300B2A751;
 			productRefGroup = ACF18EEA22ECC14300B2A751 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ACD89D3922ECDECF00166B04 /* Products */;
+					ProjectRef = ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				ACF18EE822ECC14300B2A751 /* MigrosUsage */,
+				ACF18F0322ECC5D400B2A751 /* UsageWidget */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ACD89D4522ECDED000166B04 /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = ACD89D4422ECDED000166B04 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		ACF18EE722ECC14300B2A751 /* Resources */ = {
@@ -132,6 +276,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ACF18F0222ECC5D400B2A751 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF18F0D22ECC5D400B2A751 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,12 +291,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD89D6022ECE07B00166B04 /* LoginViewController.swift in Sources */,
 				ACF18EEF22ECC14300B2A751 /* ViewController.swift in Sources */,
 				ACF18EED22ECC14300B2A751 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ACF18F0022ECC5D400B2A751 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF18F0A22ECC5D400B2A751 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACD89D5D22ECE04600166B04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeychainSwift;
+			targetProxy = ACD89D5C22ECE04600166B04 /* PBXContainerItemProxy */;
+		};
+		ACF18F1022ECC5D400B2A751 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACF18F0322ECC5D400B2A751 /* UsageWidget */;
+			targetProxy = ACF18F0F22ECC5D400B2A751 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ACF18EF022ECC14300B2A751 /* Main.storyboard */ = {
@@ -161,6 +335,14 @@
 				ACF18EF622ECC14600B2A751 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ACF18F0B22ECC5D400B2A751 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACF18F0C22ECC5D400B2A751 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -285,6 +467,7 @@
 		ACF18EFC22ECC14600B2A751 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDJHDNKXD6;
@@ -304,6 +487,7 @@
 		ACF18EFD22ECC14600B2A751 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDJHDNKXD6;
@@ -317,6 +501,44 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		ACF18F1322ECC5D400B2A751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NDJHDNKXD6;
+				INFOPLIST_FILE = UsageWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACF18F1422ECC5D400B2A751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NDJHDNKXD6;
+				INFOPLIST_FILE = UsageWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -337,6 +559,15 @@
 			buildConfigurations = (
 				ACF18EFC22ECC14600B2A751 /* Debug */,
 				ACF18EFD22ECC14600B2A751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACF18F1222ECC5D400B2A751 /* Build configuration list for PBXNativeTarget "UsageWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACF18F1322ECC5D400B2A751 /* Debug */,
+				ACF18F1422ECC5D400B2A751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
