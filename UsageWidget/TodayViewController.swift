@@ -27,7 +27,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		let keychain = KeychainSwift()
 		keychain.accessGroup = "NDJHDNKXD6.dev.yannick.MigrosUsage"
 		
-		guard let username = keychain.get("username"), let password = keychain.get("username") else {
+		guard let username = keychain.get("username"), let password = keychain.get("password") else {
 			self.label.text = "Please provide credentials."
 			completionHandler(.failed)
 			return
@@ -80,34 +80,21 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 							// self.remainingField.stringValue = "\(remainingMB) remaining for \(remainingDays) Days"
 							
 							self.label.text = "Used \(usedMB) of \(totalMB)"
+							completionHandler(NCUpdateResult.newData)
+							DispatchQueue.main.async {
+								spinner.stopAnimating()
+							}
 						}
 					case .failure(let error):
 						print(error)
+						completionHandler(.failed)
 					}
 				}
 			}
 		}
 		
-		
-		print(username, password)
-		
-		// Perform any setup necessary in order to update the view.
-	
-		// If an error is encountered, use NCUpdateResult.Failed
-		// If there's no update required, use NCUpdateResult.NoData
-		// If there's an update, use NCUpdateResult.NewData
-	
-		
-		
-		DispatchQueue.main.async {
-			spinner.stopAnimating()
-		}
-		
-		
 		print("widgetPerformUpdate")
-		completionHandler(NCUpdateResult.newData)
 	}
-
 
 	func extract(from: String, between: String, and: String) -> String {
 		if let range = from.range(of: between) {
