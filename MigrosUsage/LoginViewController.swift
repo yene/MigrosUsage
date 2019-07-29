@@ -2,6 +2,7 @@
 
 import UIKit
 import KeychainSwift
+import NotificationCenter
 
 class LoginViewController: UIViewController {
 	@IBOutlet weak var usernameInput: UITextField?
@@ -13,7 +14,9 @@ class LoginViewController: UIViewController {
 			keychain.set(username, forKey: "username")
 			keychain.set(password, forKey: "password")
 			print(username, password)
-			self.navigationController?.popViewController(animated: true)
+			// inform widget to load
+			NCWidgetController().setHasContent(true, forWidgetWithBundleIdentifier: "dev.yannick.MigrosUsage.UsageWidget")
+			self.dismiss(animated: true, completion: nil)
 		} else {
 			// TODO: improve error handling
 			print("show error dialog")

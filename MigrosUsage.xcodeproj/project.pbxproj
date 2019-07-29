@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACA93E1C22EF2092001DC560 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */; };
+		ACA93E1F22EF2092001DC560 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA93E1E22EF2092001DC560 /* TodayViewController.swift */; };
+		ACA93E2222EF2092001DC560 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA93E2022EF2092001DC560 /* MainInterface.storyboard */; };
+		ACA93E2622EF2092001DC560 /* UsageWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ACA93E1B22EF2092001DC560 /* UsageWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ACD89D5A22ECE04600166B04 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD89D4522ECDED000166B04 /* KeychainSwift.framework */; };
 		ACD89D5B22ECE04600166B04 /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACD89D4522ECDED000166B04 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACD89D6022ECE07B00166B04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */; };
@@ -19,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		ACA93E2422EF2092001DC560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACF18EE122ECC14300B2A751 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACA93E1A22EF2092001DC560;
+			remoteInfo = UsageWidget;
+		};
 		ACD89D4422ECDED000166B04 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */;
@@ -53,6 +64,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				ACA93E2622EF2092001DC560 /* UsageWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +72,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ACA93E1B22EF2092001DC560 /* UsageWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UsageWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA93E1E22EF2092001DC560 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		ACA93E2122EF2092001DC560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		ACA93E2322EF2092001DC560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA93E2A22EF2218001DC560 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ACA93E2D22EF2E59001DC560 /* UsageWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UsageWidget.entitlements; sourceTree = "<group>"; };
+		ACA93E2E22EF2E67001DC560 /* MigrosUsage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MigrosUsage.entitlements; sourceTree = "<group>"; };
 		ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "../../Swift/MigrosUsage/MigrosUsage/keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACF18EE922ECC14300B2A751 /* MigrosUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MigrosUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +93,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ACA93E1822EF2092001DC560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA93E1C22EF2092001DC560 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACF18EE622ECC14300B2A751 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +112,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACA93E1D22EF2092001DC560 /* UsageWidget */ = {
+			isa = PBXGroup;
+			children = (
+				ACA93E2D22EF2E59001DC560 /* UsageWidget.entitlements */,
+				ACA93E1E22EF2092001DC560 /* TodayViewController.swift */,
+				ACA93E2022EF2092001DC560 /* MainInterface.storyboard */,
+				ACA93E2322EF2092001DC560 /* Info.plist */,
+			);
+			path = UsageWidget;
+			sourceTree = "<group>";
+		};
 		ACD89D3922ECDECF00166B04 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +134,10 @@
 		ACF18EE022ECC14300B2A751 = {
 			isa = PBXGroup;
 			children = (
+				ACA93E2A22EF2218001DC560 /* README.md */,
 				ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */,
 				ACF18EEB22ECC14300B2A751 /* MigrosUsage */,
+				ACA93E1D22EF2092001DC560 /* UsageWidget */,
 				ACF18F0522ECC5D400B2A751 /* Frameworks */,
 				ACF18EEA22ECC14300B2A751 /* Products */,
 			);
@@ -107,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				ACF18EE922ECC14300B2A751 /* MigrosUsage.app */,
+				ACA93E1B22EF2092001DC560 /* UsageWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,6 +155,7 @@
 		ACF18EEB22ECC14300B2A751 /* MigrosUsage */ = {
 			isa = PBXGroup;
 			children = (
+				ACA93E2E22EF2E67001DC560 /* MigrosUsage.entitlements */,
 				ACF18EFE22ECC41F00B2A751 /* logo.png */,
 				ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */,
 				ACF18EEE22ECC14300B2A751 /* ViewController.swift */,
@@ -137,6 +179,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ACA93E1A22EF2092001DC560 /* UsageWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACA93E2722EF2092001DC560 /* Build configuration list for PBXNativeTarget "UsageWidget" */;
+			buildPhases = (
+				ACA93E1722EF2092001DC560 /* Sources */,
+				ACA93E1822EF2092001DC560 /* Frameworks */,
+				ACA93E1922EF2092001DC560 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UsageWidget;
+			productName = UsageWidget;
+			productReference = ACA93E1B22EF2092001DC560 /* UsageWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		ACF18EE822ECC14300B2A751 /* MigrosUsage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACF18EFB22ECC14600B2A751 /* Build configuration list for PBXNativeTarget "MigrosUsage" */;
@@ -151,6 +210,7 @@
 			);
 			dependencies = (
 				ACD89D5D22ECE04600166B04 /* PBXTargetDependency */,
+				ACA93E2522EF2092001DC560 /* PBXTargetDependency */,
 			);
 			name = MigrosUsage;
 			productName = MigrosUsage;
@@ -167,8 +227,21 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = yannick.dev;
 				TargetAttributes = {
+					ACA93E1A22EF2092001DC560 = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
 					ACF18EE822ECC14300B2A751 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -192,6 +265,7 @@
 			projectRoot = "";
 			targets = (
 				ACF18EE822ECC14300B2A751 /* MigrosUsage */,
+				ACA93E1A22EF2092001DC560 /* UsageWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +281,14 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ACA93E1922EF2092001DC560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA93E2222EF2092001DC560 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACF18EE722ECC14300B2A751 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +303,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ACA93E1722EF2092001DC560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA93E1F22EF2092001DC560 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACF18EE522ECC14300B2A751 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +324,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		ACA93E2522EF2092001DC560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACA93E1A22EF2092001DC560 /* UsageWidget */;
+			targetProxy = ACA93E2422EF2092001DC560 /* PBXContainerItemProxy */;
+		};
 		ACD89D5D22ECE04600166B04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KeychainSwift;
@@ -242,6 +337,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		ACA93E2022EF2092001DC560 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACA93E2122EF2092001DC560 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		ACF18EF022ECC14300B2A751 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,6 +364,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		ACA93E2822EF2092001DC560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = UsageWidget/UsageWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NDJHDNKXD6;
+				INFOPLIST_FILE = UsageWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACA93E2922EF2092001DC560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = UsageWidget/UsageWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NDJHDNKXD6;
+				INFOPLIST_FILE = UsageWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		ACF18EF922ECC14600B2A751 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -382,6 +527,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MigrosUsage/MigrosUsage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDJHDNKXD6;
 				INFOPLIST_FILE = MigrosUsage/Info.plist;
@@ -402,6 +548,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MigrosUsage/MigrosUsage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDJHDNKXD6;
 				INFOPLIST_FILE = MigrosUsage/Info.plist;
@@ -420,6 +567,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ACA93E2722EF2092001DC560 /* Build configuration list for PBXNativeTarget "UsageWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACA93E2822EF2092001DC560 /* Debug */,
+				ACA93E2922EF2092001DC560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ACF18EE422ECC14300B2A751 /* Build configuration list for PBXProject "MigrosUsage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -8,6 +8,7 @@ class ViewController: UIViewController {
 	@IBAction func removeCredentials(sender: UIButton) {
 		let keychain = KeychainSwift()
 		keychain.clear()
+		self.performSegue(withIdentifier: "gotoLogin", sender:self)
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {

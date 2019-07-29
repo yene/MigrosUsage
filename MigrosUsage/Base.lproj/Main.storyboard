@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Remove Credentials"/>
                                 <connections>
-                                    <action selector="validateLoginWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Co-1P-LXk"/>
+                                    <action selector="removeCredentialsWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pW1-xR-BJq"/>
                                 </connections>
                             </button>
                         </subviews>
