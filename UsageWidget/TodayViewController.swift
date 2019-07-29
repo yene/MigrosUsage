@@ -12,18 +12,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		print("viewdidload")
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		spinner.hidesWhenStopped = true
-		// spinner.startAnimating()
 		self.view.addSubview(spinner)
 		spinner.center = self.view.center
-		print("viewDidAppear")
 	}
 	
 	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+		spinner.startAnimating()
+		
 		let keychain = KeychainSwift()
 		keychain.accessGroup = "NDJHDNKXD6.dev.yannick.MigrosUsage"
 		
@@ -63,27 +62,30 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 							let totalFloat = Double(parts[2].trimmingCharacters(in: .whitespacesAndNewlines)) ?? 0.0
 							let total = Int64(totalFloat * 1024 * 1024)
 							let bcf = ByteCountFormatter()
-							bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
+							bcf.allowedUnits = [.useMB]
+							bcf.isAdaptive = false // not fractions please
 							bcf.countStyle = .binary
 							let usedMB = bcf.string(fromByteCount: used)
-							let totalMB = bcf.string(fromByteCount: total)
 							let remainingMB = bcf.string(fromByteCount: total-used)
-							// print("Data Used: \(usedMB) of \(totalMB)")
-							// self.usedField.stringValue = "Used \(usedMB) of \(totalMB)"
-							
-							// self.progressBar.maxValue = totalFloat
-							// self.progressBar.doubleValue = usedFloat
+							bcf.allowedUnits = [.useGB]
+							let totalMB = bcf.string(fromByteCount: total)
 							
 							// Calculate remaining days, by getting this months range
 							let interval = Calendar.current.dateInterval(of: .month, for: Date())!
 							let remainingDays = Calendar.current.dateComponents([.day], from: Date(), to: interval.end).day!
-							// self.remainingField.stringValue = "\(remainingMB) remaining for \(remainingDays) Days"
 							
-							self.label.text = "Used \(usedMB) of \(totalMB)"
-							completionHandler(NCUpdateResult.newData)
+							var l = "Used \(usedMB) of \(totalMB).\n"
+							if remainingDays == 0 {
+								l = l + "\(remainingMB) remaining for today."
+							} else {
+								l = l + "\(remainingMB) remaining for the next \(remainingDays) Days."
+							}
+							
 							DispatchQueue.main.async {
+								self.label.text = l
 								spinner.stopAnimating()
 							}
+							completionHandler(NCUpdateResult.newData)
 						}
 					case .failure(let error):
 						print(error)

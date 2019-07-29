@@ -14,39 +14,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		508566911FA34EB1004208ED /* AccessGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessGroupTests.swift; sourceTree = "<group>"; };
-		508566921FA34EB1004208ED /* ClearTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearTests.swift; sourceTree = "<group>"; };
-		508566931FA34EB1004208ED /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		508566941FA34EB1004208ED /* KeychainSwiftPrefixedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftPrefixedTests.swift; sourceTree = "<group>"; };
-		508566951FA34EB1004208ED /* KeychainSwiftTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KeychainSwiftTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		508566961FA34EB1004208ED /* KeychainSwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftTests.swift; sourceTree = "<group>"; };
-		508566981FA34EB1004208ED /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		508566991FA34EB1004208ED /* macOS_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = macOS_Tests.swift; sourceTree = "<group>"; };
-		5085669A1FA34EB1004208ED /* SynchronizableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizableTests.swift; sourceTree = "<group>"; };
-		7E3A6B7D1D3F6779007C5B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E3A6B7F1D3F6779007C5B1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E3A6B811D3F6779007C5B1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7E3A6B841D3F6779007C5B1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7E3A6B861D3F6779007C5B1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ED6C96C1B1C118F00FE8090 /* KeychainSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED6C9701B1C118F00FE8090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ED6C9711B1C118F00FE8090 /* KeychainSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainSwift.h; sourceTree = "<group>"; };
 		7ED6C9881B1C125000FE8090 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		7ED6C98B1B1C126D00FE8090 /* keychain-swift-demo-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keychain-swift-demo-3.png"; sourceTree = "<group>"; };
 		7ED6C98D1B1C128100FE8090 /* KeychainSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
 		7ED6C98E1B1C128100FE8090 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
 		7ED6C98F1B1C128100FE8090 /* TegKeychainConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegKeychainConstants.swift; sourceTree = "<group>"; };
-		7ED6C9A01B1C133500FE8090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7ED6C9A11B1C133500FE8090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7ED6C9A31B1C133500FE8090 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7ED6C9A61B1C133500FE8090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7ED6C9A81B1C133500FE8090 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7ED6C9AB1B1C133500FE8090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		7ED6C9C61B1C16BC00FE8090 /* concatenate_swift_files.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = concatenate_swift_files.sh; sourceTree = "<group>"; };
 		7ED6C9C91B1C16EE00FE8090 /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = "<group>"; };
-		7EE5B9A01E32F6D400AA56FF /* KeychainSwiftCBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftCBridge.swift; sourceTree = "<group>"; };
-		AC9EB8C722EF59260010AD0F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C7E1DE4A1E4B7C9F003818F6 /* ConcurrencyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrencyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,54 +35,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		508566901FA34EB1004208ED /* KeychainSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				508566911FA34EB1004208ED /* AccessGroupTests.swift */,
-				508566921FA34EB1004208ED /* ClearTests.swift */,
-				C7E1DE4A1E4B7C9F003818F6 /* ConcurrencyTests.swift */,
-				508566931FA34EB1004208ED /* Info.plist */,
-				508566941FA34EB1004208ED /* KeychainSwiftPrefixedTests.swift */,
-				508566951FA34EB1004208ED /* KeychainSwiftTests-Bridging-Header.h */,
-				508566961FA34EB1004208ED /* KeychainSwiftTests.swift */,
-				508566971FA34EB1004208ED /* macOS Tests */,
-				5085669A1FA34EB1004208ED /* SynchronizableTests.swift */,
-			);
-			path = KeychainSwiftTests;
-			sourceTree = "<group>";
-		};
-		508566971FA34EB1004208ED /* macOS Tests */ = {
-			isa = PBXGroup;
-			children = (
-				508566981FA34EB1004208ED /* Info.plist */,
-				508566991FA34EB1004208ED /* macOS_Tests.swift */,
-			);
-			path = "macOS Tests";
-			sourceTree = "<group>";
-		};
-		7E3A6B7C1D3F6779007C5B1F /* macOS Demo */ = {
-			isa = PBXGroup;
-			children = (
-				7E3A6B7D1D3F6779007C5B1F /* AppDelegate.swift */,
-				7E3A6B7F1D3F6779007C5B1F /* ViewController.swift */,
-				7E3A6B811D3F6779007C5B1F /* Assets.xcassets */,
-				7E3A6B831D3F6779007C5B1F /* Main.storyboard */,
-				7E3A6B861D3F6779007C5B1F /* Info.plist */,
-			);
-			path = "macOS Demo";
-			sourceTree = "<group>";
-		};
 		7ED6C9621B1C118F00FE8090 = {
 			isa = PBXGroup;
 			children = (
-				AC9EB8C722EF59260010AD0F /* Default-568h@2x.png */,
 				7ED6C96E1B1C118F00FE8090 /* Sources */,
-				7ED6C97B1B1C118F00FE8090 /* Tests */,
-				7ED6C99E1B1C133500FE8090 /* Demo */,
-				7ED6C98A1B1C126D00FE8090 /* graphics */,
 				7ED6C9C81B1C16EE00FE8090 /* Distrib */,
-				7ED6C9C51B1C16BC00FE8090 /* scripts */,
-				7E3A6B7C1D3F6779007C5B1F /* macOS Demo */,
 				7ED6C96D1B1C118F00FE8090 /* Products */,
 				7ED6C9881B1C125000FE8090 /* README.md */,
 			);
@@ -139,52 +71,6 @@
 				7ED6C9701B1C118F00FE8090 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7ED6C97B1B1C118F00FE8090 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				508566901FA34EB1004208ED /* KeychainSwiftTests */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		7ED6C98A1B1C126D00FE8090 /* graphics */ = {
-			isa = PBXGroup;
-			children = (
-				7ED6C98B1B1C126D00FE8090 /* keychain-swift-demo-3.png */,
-			);
-			path = graphics;
-			sourceTree = "<group>";
-		};
-		7ED6C99E1B1C133500FE8090 /* Demo */ = {
-			isa = PBXGroup;
-			children = (
-				7ED6C9A11B1C133500FE8090 /* AppDelegate.swift */,
-				7ED6C9A31B1C133500FE8090 /* ViewController.swift */,
-				7EE5B9A01E32F6D400AA56FF /* KeychainSwiftCBridge.swift */,
-				7ED6C9A51B1C133500FE8090 /* Main.storyboard */,
-				7ED6C9A81B1C133500FE8090 /* Images.xcassets */,
-				7ED6C9AA1B1C133500FE8090 /* LaunchScreen.xib */,
-				7ED6C99F1B1C133500FE8090 /* Supporting Files */,
-			);
-			path = Demo;
-			sourceTree = "<group>";
-		};
-		7ED6C99F1B1C133500FE8090 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7ED6C9A01B1C133500FE8090 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7ED6C9C51B1C16BC00FE8090 /* scripts */ = {
-			isa = PBXGroup;
-			children = (
-				7ED6C9C61B1C16BC00FE8090 /* concatenate_swift_files.sh */,
-			);
-			path = scripts;
 			sourceTree = "<group>";
 		};
 		7ED6C9C81B1C16EE00FE8090 /* Distrib */ = {
@@ -283,33 +169,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		7E3A6B831D3F6779007C5B1F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E3A6B841D3F6779007C5B1F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7ED6C9A51B1C133500FE8090 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7ED6C9A61B1C133500FE8090 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7ED6C9AA1B1C133500FE8090 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7ED6C9AB1B1C133500FE8090 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7ED6C9801B1C118F00FE8090 /* Debug */ = {

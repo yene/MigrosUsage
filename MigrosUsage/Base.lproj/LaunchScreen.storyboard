@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tlu-oN-i0R">
-                                <rect key="frame" x="103.5" y="349.5" width="207" height="207"/>
+                                <rect key="frame" x="103.5" y="213.5" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tlu-oN-i0R" secondAttribute="height" multiplier="1:1" id="907-3s-tWK"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tlu-oN-i0R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WPe-K9-331"/>
-                            <constraint firstItem="tlu-oN-i0R" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="n4A-B4-Qxx"/>
+                            <constraint firstItem="tlu-oN-i0R" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="n4A-B4-Qxx"/>
                             <constraint firstItem="tlu-oN-i0R" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="piS-zh-hRa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

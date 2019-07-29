@@ -18,14 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="763-TH-hy1">
-                                <rect key="frame" x="103.5" y="349.5" width="207" height="207"/>
+                                <rect key="frame" x="103.5" y="213.5" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="763-TH-hy1" secondAttribute="height" multiplier="1:1" id="kEB-6Z-94X"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAM-8G-OgS">
-                                <rect key="frame" x="20" y="683" width="350" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAM-8G-OgS">
+                                <rect key="frame" x="103" y="428" width="208" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Remove Credentials"/>
                                 <connections>
@@ -35,9 +34,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="FAM-8G-OgS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BVQ-44-8BY"/>
                             <constraint firstItem="763-TH-hy1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HG3-3a-Dae"/>
-                            <constraint firstItem="763-TH-hy1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="aLH-NI-aMw"/>
+                            <constraint firstItem="763-TH-hy1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="aLH-NI-aMw"/>
                             <constraint firstItem="763-TH-hy1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="irL-MY-nha"/>
+                            <constraint firstItem="FAM-8G-OgS" firstAttribute="top" secondItem="763-TH-hy1" secondAttribute="bottom" constant="7.5" id="wAy-mf-DGu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
