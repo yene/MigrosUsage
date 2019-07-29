@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC9EB8A822EF587A0010AD0F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA93E7122EF3156001DC560 /* Alamofire.framework */; };
+		AC9EB8C522EF58E80010AD0F /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9EB8B622EF58C90010AD0F /* KeychainSwift.framework */; };
+		AC9EB8C622EF58F00010AD0F /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9EB8B622EF58C90010AD0F /* KeychainSwift.framework */; };
 		ACA93E1C22EF2092001DC560 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */; };
 		ACA93E1F22EF2092001DC560 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA93E1E22EF2092001DC560 /* TodayViewController.swift */; };
 		ACA93E2222EF2092001DC560 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA93E2022EF2092001DC560 /* MainInterface.storyboard */; };
 		ACA93E2622EF2092001DC560 /* UsageWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ACA93E1B22EF2092001DC560 /* UsageWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		ACA93E7E22EF31A9001DC560 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA93E7122EF3156001DC560 /* Alamofire.framework */; };
-		ACD89D5A22ECE04600166B04 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD89D4522ECDED000166B04 /* KeychainSwift.framework */; };
-		ACD89D5B22ECE04600166B04 /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACD89D4522ECDED000166B04 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACD89D6022ECE07B00166B04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */; };
 		ACF18EED22ECC14300B2A751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */; };
 		ACF18EEF22ECC14300B2A751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18EEE22ECC14300B2A751 /* ViewController.swift */; };
@@ -24,6 +24,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AC9EB8B522EF58C90010AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C96C1B1C118F00FE8090;
+			remoteInfo = KeychainSwift;
+		};
+		AC9EB8B722EF58C90010AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C7A1BC29950001F2B7A;
+			remoteInfo = "KeychainSwift-macOS";
+		};
+		AC9EB8B922EF58C90010AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C8A1BC29984001F2B7A;
+			remoteInfo = "KeychainSwift-watchOS";
+		};
+		AC9EB8BB22EF58C90010AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 23E785601BDA410C00B7564A;
+			remoteInfo = "KeychainSwift-tvOS";
+		};
+		AC9EB8BD22EF58C90010AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C9771B1C118F00FE8090;
+			remoteInfo = KeychainSwiftTests;
+		};
+		AC9EB8BF22EF58C90010AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C99D1B1C133500FE8090;
+			remoteInfo = Demo;
+		};
+		AC9EB8C122EF58C90010AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E3A6B601D3F62C2007C5B1F;
+			remoteInfo = "macOS Tests";
+		};
+		AC9EB8C322EF58C90010AD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E3A6B7B1D3F6779007C5B1F;
+			remoteInfo = "macOS Demo";
+		};
 		ACA93E2422EF2092001DC560 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ACF18EE122ECC14300B2A751 /* Project object */;
@@ -80,20 +136,6 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
-		ACD89D4422ECDED000166B04 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7ED6C96C1B1C118F00FE8090;
-			remoteInfo = KeychainSwift;
-		};
-		ACD89D5C22ECE04600166B04 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7ED6C96B1B1C118F00FE8090;
-			remoteInfo = KeychainSwift;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,7 +145,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ACD89D5B22ECE04600166B04 /* KeychainSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +163,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		ACA93E1B22EF2092001DC560 /* UsageWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UsageWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA93E1E22EF2092001DC560 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		ACA93E2122EF2092001DC560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -130,7 +172,6 @@
 		ACA93E2D22EF2E59001DC560 /* UsageWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UsageWidget.entitlements; sourceTree = "<group>"; };
 		ACA93E2E22EF2E67001DC560 /* MigrosUsage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MigrosUsage.entitlements; sourceTree = "<group>"; };
 		ACA93E6522EF3155001DC560 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-4.8.2/Alamofire.xcodeproj"; sourceTree = "<group>"; };
-		ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "../../Swift/MigrosUsage/MigrosUsage/keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACF18EE922ECC14300B2A751 /* MigrosUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MigrosUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +189,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA93E7E22EF31A9001DC560 /* Alamofire.framework in Frameworks */,
+				AC9EB8C622EF58F00010AD0F /* KeychainSwift.framework in Frameworks */,
+				AC9EB8A822EF587A0010AD0F /* Alamofire.framework in Frameworks */,
 				ACA93E1C22EF2092001DC560 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,13 +199,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD89D5A22ECE04600166B04 /* KeychainSwift.framework in Frameworks */,
+				AC9EB8C522EF58E80010AD0F /* KeychainSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC9EB8AA22EF58C90010AD0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC9EB8B622EF58C90010AD0F /* KeychainSwift.framework */,
+				AC9EB8B822EF58C90010AD0F /* KeychainSwift.framework */,
+				AC9EB8BA22EF58C90010AD0F /* KeychainSwift.framework */,
+				AC9EB8BC22EF58C90010AD0F /* KeychainSwift.framework */,
+				AC9EB8BE22EF58C90010AD0F /* KeychainSwiftTests.xctest */,
+				AC9EB8C022EF58C90010AD0F /* Keychain Swift.app */,
+				AC9EB8C222EF58C90010AD0F /* macOS Tests.xctest */,
+				AC9EB8C422EF58C90010AD0F /* macOS Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ACA93E1D22EF2092001DC560 /* UsageWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,20 +246,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ACD89D3922ECDECF00166B04 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				ACD89D4522ECDED000166B04 /* KeychainSwift.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		ACF18EE022ECC14300B2A751 = {
 			isa = PBXGroup;
 			children = (
 				ACA93E2A22EF2218001DC560 /* README.md */,
+				AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */,
 				ACA93E6522EF3155001DC560 /* Alamofire.xcodeproj */,
-				ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */,
 				ACF18EEB22ECC14300B2A751 /* MigrosUsage */,
 				ACA93E1D22EF2092001DC560 /* UsageWidget */,
 				ACF18F0522ECC5D400B2A751 /* Frameworks */,
@@ -276,7 +325,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				ACD89D5D22ECE04600166B04 /* PBXTargetDependency */,
 				ACA93E2522EF2092001DC560 /* PBXTargetDependency */,
 			);
 			name = MigrosUsage;
@@ -329,8 +377,8 @@
 					ProjectRef = ACA93E6522EF3155001DC560 /* Alamofire.xcodeproj */;
 				},
 				{
-					ProductGroup = ACD89D3922ECDECF00166B04 /* Products */;
-					ProjectRef = ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */;
+					ProductGroup = AC9EB8AA22EF58C90010AD0F /* Products */;
+					ProjectRef = AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -342,6 +390,62 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		AC9EB8B622EF58C90010AD0F /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = AC9EB8B522EF58C90010AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC9EB8B822EF58C90010AD0F /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = AC9EB8B722EF58C90010AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC9EB8BA22EF58C90010AD0F /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = AC9EB8B922EF58C90010AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC9EB8BC22EF58C90010AD0F /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = AC9EB8BB22EF58C90010AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC9EB8BE22EF58C90010AD0F /* KeychainSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KeychainSwiftTests.xctest;
+			remoteRef = AC9EB8BD22EF58C90010AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC9EB8C022EF58C90010AD0F /* Keychain Swift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Keychain Swift.app";
+			remoteRef = AC9EB8BF22EF58C90010AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC9EB8C222EF58C90010AD0F /* macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "macOS Tests.xctest";
+			remoteRef = AC9EB8C122EF58C90010AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC9EB8C422EF58C90010AD0F /* macOS Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "macOS Demo.app";
+			remoteRef = AC9EB8C322EF58C90010AD0F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		ACA93E7122EF3156001DC560 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -389,13 +493,6 @@
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
 			remoteRef = ACA93E7C22EF3156001DC560 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ACD89D4522ECDED000166B04 /* KeychainSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KeychainSwift.framework;
-			remoteRef = ACD89D4422ECDED000166B04 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -448,11 +545,6 @@
 			isa = PBXTargetDependency;
 			target = ACA93E1A22EF2092001DC560 /* UsageWidget */;
 			targetProxy = ACA93E2422EF2092001DC560 /* PBXContainerItemProxy */;
-		};
-		ACD89D5D22ECE04600166B04 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KeychainSwift;
-			targetProxy = ACD89D5C22ECE04600166B04 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
