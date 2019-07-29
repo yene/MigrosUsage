@@ -16,10 +16,6 @@
 		ACF18EF422ECC14600B2A751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF322ECC14600B2A751 /* Assets.xcassets */; };
 		ACF18EF722ECC14600B2A751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF522ECC14600B2A751 /* LaunchScreen.storyboard */; };
 		ACF18EFF22ECC41F00B2A751 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EFE22ECC41F00B2A751 /* logo.png */; };
-		ACF18F0722ECC5D400B2A751 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */; };
-		ACF18F0A22ECC5D400B2A751 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18F0922ECC5D400B2A751 /* TodayViewController.swift */; };
-		ACF18F0D22ECC5D400B2A751 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF18F0B22ECC5D400B2A751 /* MainInterface.storyboard */; };
-		ACF18F1122ECC5D400B2A751 /* UsageWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ACF18F0422ECC5D400B2A751 /* UsageWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +32,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7ED6C96B1B1C118F00FE8090;
 			remoteInfo = KeychainSwift;
-		};
-		ACF18F0F22ECC5D400B2A751 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF18EE122ECC14300B2A751 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ACF18F0322ECC5D400B2A751;
-			remoteInfo = UsageWidget;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -64,7 +53,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				ACF18F1122ECC5D400B2A751 /* UsageWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,11 +70,7 @@
 		ACF18EF622ECC14600B2A751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF18EF822ECC14600B2A751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACF18EFE22ECC41F00B2A751 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		ACF18F0422ECC5D400B2A751 /* UsageWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UsageWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		ACF18F0922ECC5D400B2A751 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		ACF18F0C22ECC5D400B2A751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		ACF18F0E22ECC5D400B2A751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,14 +79,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD89D5A22ECE04600166B04 /* KeychainSwift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ACF18F0122ECC5D400B2A751 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ACF18F0722ECC5D400B2A751 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +98,6 @@
 			children = (
 				ACD89D3822ECDECF00166B04 /* KeychainSwift.xcodeproj */,
 				ACF18EEB22ECC14300B2A751 /* MigrosUsage */,
-				ACF18F0822ECC5D400B2A751 /* UsageWidget */,
 				ACF18F0522ECC5D400B2A751 /* Frameworks */,
 				ACF18EEA22ECC14300B2A751 /* Products */,
 			);
@@ -132,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				ACF18EE922ECC14300B2A751 /* MigrosUsage.app */,
-				ACF18F0422ECC5D400B2A751 /* UsageWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,16 +134,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ACF18F0822ECC5D400B2A751 /* UsageWidget */ = {
-			isa = PBXGroup;
-			children = (
-				ACF18F0922ECC5D400B2A751 /* TodayViewController.swift */,
-				ACF18F0B22ECC5D400B2A751 /* MainInterface.storyboard */,
-				ACF18F0E22ECC5D400B2A751 /* Info.plist */,
-			);
-			path = UsageWidget;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,30 +150,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				ACF18F1022ECC5D400B2A751 /* PBXTargetDependency */,
 				ACD89D5D22ECE04600166B04 /* PBXTargetDependency */,
 			);
 			name = MigrosUsage;
 			productName = MigrosUsage;
 			productReference = ACF18EE922ECC14300B2A751 /* MigrosUsage.app */;
 			productType = "com.apple.product-type.application";
-		};
-		ACF18F0322ECC5D400B2A751 /* UsageWidget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ACF18F1222ECC5D400B2A751 /* Build configuration list for PBXNativeTarget "UsageWidget" */;
-			buildPhases = (
-				ACF18F0022ECC5D400B2A751 /* Sources */,
-				ACF18F0122ECC5D400B2A751 /* Frameworks */,
-				ACF18F0222ECC5D400B2A751 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = UsageWidget;
-			productName = UsageWidget;
-			productReference = ACF18F0422ECC5D400B2A751 /* UsageWidget.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -222,9 +168,6 @@
 				ORGANIZATIONNAME = yannick.dev;
 				TargetAttributes = {
 					ACF18EE822ECC14300B2A751 = {
-						CreatedOnToolsVersion = 10.3;
-					};
-					ACF18F0322ECC5D400B2A751 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
@@ -249,7 +192,6 @@
 			projectRoot = "";
 			targets = (
 				ACF18EE822ECC14300B2A751 /* MigrosUsage */,
-				ACF18F0322ECC5D400B2A751 /* UsageWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -276,14 +218,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACF18F0222ECC5D400B2A751 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ACF18F0D22ECC5D400B2A751 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -297,14 +231,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACF18F0022ECC5D400B2A751 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ACF18F0A22ECC5D400B2A751 /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -312,11 +238,6 @@
 			isa = PBXTargetDependency;
 			name = KeychainSwift;
 			targetProxy = ACD89D5C22ECE04600166B04 /* PBXContainerItemProxy */;
-		};
-		ACF18F1022ECC5D400B2A751 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ACF18F0322ECC5D400B2A751 /* UsageWidget */;
-			targetProxy = ACF18F0F22ECC5D400B2A751 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -335,14 +256,6 @@
 				ACF18EF622ECC14600B2A751 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		ACF18F0B22ECC5D400B2A751 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACF18F0C22ECC5D400B2A751 /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -504,44 +417,6 @@
 			};
 			name = Release;
 		};
-		ACF18F1322ECC5D400B2A751 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NDJHDNKXD6;
-				INFOPLIST_FILE = UsageWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		ACF18F1422ECC5D400B2A751 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NDJHDNKXD6;
-				INFOPLIST_FILE = UsageWidget/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -559,15 +434,6 @@
 			buildConfigurations = (
 				ACF18EFC22ECC14600B2A751 /* Debug */,
 				ACF18EFD22ECC14600B2A751 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ACF18F1222ECC5D400B2A751 /* Build configuration list for PBXNativeTarget "UsageWidget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ACF18F1322ECC5D400B2A751 /* Debug */,
-				ACF18F1422ECC5D400B2A751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

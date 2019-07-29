@@ -13,8 +13,9 @@ class LoginViewController: UIViewController {
 			keychain.set(username, forKey: "username")
 			keychain.set(password, forKey: "password")
 			print(username, password)
-			// TODO: go back to main view
+			self.navigationController?.popViewController(animated: true)
 		} else {
+			// TODO: improve error handling
 			print("show error dialog")
 		}
 	}
