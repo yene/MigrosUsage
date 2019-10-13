@@ -1,0 +1,6 @@
+// Localizable.strings
+
+"Getting used data..." = "Hole infos...";
+"Please provide credentials." = "Bitte in der App anmelden.";
+"usage-today" = "gebraucht, %@ von %@. %@ übrig.";
+"usage-other" = "gebraucht, %@ von %@. %@ übrig für die nächsten %d Tage.";

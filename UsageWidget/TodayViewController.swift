@@ -21,13 +21,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	}
 	
 	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+		self.label.text = ""
 		spinner.startAnimating()
-		
+				
 		let keychain = KeychainSwift()
 		keychain.accessGroup = "NDJHDNKXD6.dev.yannick.MigrosUsage"
 		
 		guard let username = keychain.get("username"), let password = keychain.get("password") else {
-			self.label.text = "Please provide credentials."
+			self.label.text = NSLocalizedString("Please provide credentials.", comment: "")
 			completionHandler(.failed)
 			return
 		}
@@ -74,11 +75,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 							let interval = Calendar.current.dateInterval(of: .month, for: Date())!
 							let remainingDays = Calendar.current.dateComponents([.day], from: Date(), to: interval.end).day!
 							
-							var l = "Used \(usedMB) of \(totalMB).\n"
+							let percentage = Int(round((usedFloat / totalFloat) * 100))
+							print(percentage)
+							//let l = String(format: "%d Notifications", percentage)
+							
+							var l = "\(percentage)% " // "Used \(usedMB) of \(totalMB).\n"
 							if remainingDays == 0 {
-								l = l + "\(remainingMB) remaining for today."
+								l = l + String(format: NSLocalizedString("usage-today", comment: ""), usedMB, totalMB, remainingMB)
 							} else {
-								l = l + "\(remainingMB) remaining for the next \(remainingDays) Days."
+								l = l + String(format: NSLocalizedString("usage-other", comment: ""), usedMB, totalMB, remainingMB, remainingDays)
 							}
 							
 							DispatchQueue.main.async {
@@ -94,8 +99,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 				}
 			}
 		}
-		
-		print("widgetPerformUpdate")
 	}
 
 	func extract(from: String, between: String, and: String) -> String {
@@ -108,5 +111,4 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		}
 		return ""
 	}
-	
 }

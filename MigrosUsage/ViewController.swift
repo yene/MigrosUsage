@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		let keychain = KeychainSwift()
 		if let _ = keychain.get("username") {
-			print("found username")
+			print("found username in Keychain")
 			return
 		}
 		print("username does not exist in keychain")

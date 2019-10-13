@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "Egb-4q-qgc"; */
+"Egb-4q-qgc.text" = "Passwort";
+
+/* Class = "UIButton"; normalTitle = "Remove Credentials"; ObjectID = "FAM-8G-OgS"; */
+"FAM-8G-OgS.normalTitle" = "Konto enfternen";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "TiD-EJ-M6A"; */
+"TiD-EJ-M6A.normalTitle" = "Anmelden";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "iRu-Ci-mnz"; */
+"iRu-Ci-mnz.text" = "Benutzername";
+
+/* Class = "UILabel"; text = "You can add the Today Widget\n on the Spotlight screen."; ObjectID = "mxA-0w-nEz"; */
+"mxA-0w-nEz.text" = "Sie können das Today Widget hinzufügen.";
