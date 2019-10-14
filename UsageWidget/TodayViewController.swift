@@ -6,6 +6,7 @@ import KeychainSwift
 import Alamofire
 
 let spinner = UIActivityIndicatorView(style: .whiteLarge)
+let useGB = true // because not everyone understands GB vs MB
 
 class TodayViewController: UIViewController, NCWidgetProviding {
 	@IBOutlet weak var label: UILabel!
@@ -63,8 +64,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 							let totalFloat = Double(parts[2].trimmingCharacters(in: .whitespacesAndNewlines)) ?? 0.0
 							let total = Int64(totalFloat * 1024 * 1024)
 							let bcf = ByteCountFormatter()
-							bcf.allowedUnits = [.useMB]
-							bcf.isAdaptive = false // not fractions please
+							bcf.allowedUnits = useGB ? [.useGB] : [.useMB]
+							bcf.isAdaptive = true // not fractions please
 							bcf.countStyle = .binary
 							let usedMB = bcf.string(fromByteCount: used)
 							let remainingMB = bcf.string(fromByteCount: total-used)
