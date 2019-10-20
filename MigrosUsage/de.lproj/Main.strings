@@ -3,7 +3,7 @@
 "Egb-4q-qgc.text" = "Passwort";
 
 /* Class = "UIButton"; normalTitle = "Remove Credentials"; ObjectID = "FAM-8G-OgS"; */
-"FAM-8G-OgS.normalTitle" = "Konto enfternen";
+"FAM-8G-OgS.normalTitle" = "Konto entfernen";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "TiD-EJ-M6A"; */
 "TiD-EJ-M6A.normalTitle" = "Anmelden";

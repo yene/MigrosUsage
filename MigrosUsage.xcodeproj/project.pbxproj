@@ -99,6 +99,7 @@
 /* Begin PBXFileReference section */
 		AC077B11235794E000EC43A9 /* GetUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsage.swift; sourceTree = "<group>"; };
 		AC077B17235B63BA00EC43A9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AC077B19235C6BC700EC43A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC99A475235359B20006DFD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC9A8622234F7B1A00E04F6F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		AC9A8626234F7D8100E04F6F /* en */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -421,6 +422,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AC077B17235B63BA00EC43A9 /* de */,
+				AC077B19235C6BC700EC43A9 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

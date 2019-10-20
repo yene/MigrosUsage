@@ -16,19 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxA-0w-nEz">
-                                <rect key="frame" x="-3" y="477" width="420" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="qZ7-oT-StY"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxA-0w-nEz">
+                                <rect key="frame" x="20" y="511.5" width="374" height="64.5"/>
                                 <string key="text">You can add the Today Widget
- on the Spotlight screen.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+ on the Spotlight screen. blabla
+
+lasdfllsadf</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-L0-gmM" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-L0-gmM" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
                                 <rect key="frame" x="57" y="97" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -41,57 +41,55 @@
                                         <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
-                                        <color key="value" red="0.86666666670000003" green="0.56078431370000004" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.86666666670000003" green="0.56078431370000004" blue="0.56862745100000001" alpha="0.12933433219178081" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
                                         <color key="value" red="0.68627450980000004" green="0.38823529410000002" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowValueText" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowValueText" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldDrawMinValueKnob" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRingSpacing">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unv-fZ-G2U">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unv-fZ-G2U">
                                 <rect key="frame" x="57" y="97" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Mqg-FO-jEe"/>
-                                    <constraint firstAttribute="width" constant="300" id="xm7-hy-GIm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSx-8H-xRa">
-                                <rect key="frame" x="207" y="97" width="0.0" height="300"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAM-8G-OgS">
-                                <rect key="frame" x="103" y="821" width="208" height="41"/>
+                                <rect key="frame" x="20" y="801" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Remove Credentials"/>
                                 <connections>
                                     <action selector="removeCredentialsWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pW1-xR-BJq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QL-aI-Dhc">
+                                <rect key="frame" x="20" y="416" width="374" height="64.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mxA-0w-nEz" firstAttribute="centerX" secondItem="ZMU-L0-gmM" secondAttribute="centerX" id="6cm-72-Uo7"/>
-                            <constraint firstItem="FAM-8G-OgS" firstAttribute="centerX" secondItem="ZMU-L0-gmM" secondAttribute="centerX" id="73F-ti-v2J"/>
-                            <constraint firstItem="mxA-0w-nEz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="477" id="Qaq-0H-OpE"/>
-                            <constraint firstItem="mxA-0w-nEz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-23" id="TIT-iv-m7r"/>
-                            <constraint firstItem="mxA-0w-nEz" firstAttribute="centerX" secondItem="Unv-fZ-G2U" secondAttribute="centerX" id="Zma-uv-Gja"/>
-                            <constraint firstItem="mxA-0w-nEz" firstAttribute="top" secondItem="ZMU-L0-gmM" secondAttribute="bottom" constant="80" id="eNJ-t4-rbn"/>
-                            <constraint firstItem="FAM-8G-OgS" firstAttribute="centerX" secondItem="GSx-8H-xRa" secondAttribute="centerX" id="jeg-rt-IJ5"/>
-                            <constraint firstItem="Unv-fZ-G2U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="kHS-MR-0p4"/>
-                            <constraint firstItem="FAM-8G-OgS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mFM-hz-mmi"/>
-                            <constraint firstItem="Unv-fZ-G2U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vWE-7b-dMu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FAM-8G-OgS" secondAttribute="bottom" constant="20" id="Cjo-Oe-l2v"/>
+                            <constraint firstItem="FAM-8G-OgS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U6a-gE-Drs"/>
+                            <constraint firstItem="mxA-0w-nEz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.2" id="Ype-ed-rb9"/>
+                            <constraint firstItem="mxA-0w-nEz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="utW-cC-YuE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mxA-0w-nEz" secondAttribute="trailing" constant="20" id="uyZ-qN-kJt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FAM-8G-OgS" secondAttribute="trailing" constant="20" id="z0J-x2-3df"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -99,7 +97,7 @@
                         <outlet property="circleView" destination="ZMU-L0-gmM" id="rNU-ZS-bIU"/>
                         <outlet property="errorLabel" destination="Unv-fZ-G2U" id="YpE-CN-ASg"/>
                         <outlet property="removeCredentialsButton" destination="FAM-8G-OgS" id="4pV-nc-FI1"/>
-                        <outlet property="valueLabel" destination="GSx-8H-xRa" id="zbX-0I-n7o"/>
+                        <outlet property="usageLabel" destination="8QL-aI-Dhc" id="VSj-Ji-wtu"/>
                         <segue destination="CLM-rT-cDe" kind="show" identifier="gotoLogin" id="zbe-VW-BhP"/>
                     </connections>
                 </viewController>

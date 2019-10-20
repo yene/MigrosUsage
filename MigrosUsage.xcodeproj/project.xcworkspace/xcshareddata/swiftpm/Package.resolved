@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UICircularProgressRing",
+        "repositoryURL": "https://github.com/yene/UICircularProgressRing/",
+        "state": {
+          "branch": null,
+          "revision": "bd8523ff2b9d76cee919d4ac37a90a7188ab0fe2",
+          "version": "6.3.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

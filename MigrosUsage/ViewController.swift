@@ -8,7 +8,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var removeCredentialsButton: UIButton?
 	@IBOutlet weak var circleView: UICircularProgressRing?
 	@IBOutlet weak var errorLabel: UILabel?
-	@IBOutlet weak var valueLabel: UILabel?
+	@IBOutlet weak var usageLabel: UILabel?
 	
 	@IBAction func removeCredentials(sender: UIButton) {
 		let dialogMessage = UIAlertController(title: NSLocalizedString("Confirm", comment: ""), message: NSLocalizedString("Are you sure?", comment: ""), preferredStyle: .alert)
@@ -28,8 +28,10 @@ class ViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		self.errorLabel!.isHidden = true
 		let cv = self.circleView!
-		cv.style = .dashed(pattern: [10.0, 10.0])
+		cv.style = .ontop
 		cv.isHidden = false
+		cv.font = UIFont.systemFont(ofSize: 70.0, weight: .bold)
+		
 		
 		let keychain = KeychainSwift()
 		guard let username = keychain.get("username"), let password = keychain.get("password") else {
@@ -45,24 +47,15 @@ class ViewController: UIViewController {
 				return
 			}
 			
+			self.usageLabel!.text = usageTextGB(totalFloat: data.total, usedFloat: data.used)
+			
+
 			let percentage = round((data.used / data.total) * 100)
-			let percentageInt = Int(percentage) // remove trailing .0
-			self.valueLabel!.text = "\(percentageInt)%"
-			print(percentage)
 			cv.startProgress(to: CGFloat(percentage), duration: 2.0)
 		}
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		//let progressRing = UICircularProgressRing()
-		// Change any of the properties you'd like
-		//progressRing.maxValue = 50
-		//progressRing.style = .dashed(pattern: [7.0, 7.0])
-		//self.view.addSubview(progressRing)
-		//progressRing.center = self.view.center
-		// topLeftLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-		// topLeftLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
 	}
 }

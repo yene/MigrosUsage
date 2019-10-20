@@ -72,15 +72,12 @@ func usageTextGB(totalFloat: Double, usedFloat: Double) -> String {
 	// Calculate remaining days, by getting this months range
 	let interval = Calendar.current.dateInterval(of: .month, for: Date())!
 	let remainingDays = Calendar.current.dateComponents([.day], from: Date(), to: interval.end).day!
-	
-	let percentage = Int(round((usedFloat / totalFloat) * 100))
-	var l = "\(percentage)% "
+
 	if remainingDays == 0 {
-		l = l + String(format: NSLocalizedString("usage-today", comment: ""), usedGB, totalGB, remainingGB)
+		return String(format: NSLocalizedString("usage-today", comment: ""), usedGB, totalGB, remainingGB)
 	} else {
-		l = l + String(format: NSLocalizedString("usage-other", comment: ""), usedGB, totalGB, remainingGB, remainingDays)
+		return String(format: NSLocalizedString("usage-other", comment: ""), usedGB, totalGB, remainingGB, remainingDays)
 	}
-	return l
 }
 
 /*

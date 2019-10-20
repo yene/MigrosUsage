@@ -2,5 +2,5 @@
 
 "Getting used data..." = "Hole infos...";
 "Please provide credentials." = "Bitte in der App anmelden.";
-"usage-today" = "benutzt: %@ von %@. %@ übrig.";
-"usage-other" = "benutzt: %@ von %@. %@ übrig für die nächsten %d Tage.";
+"usage-today" = "%@ von %@ benutzt. %@ übrig.";
+"usage-other" = "%@ von %@ benutzt. %@ übrig für die nächsten %d Tage.";

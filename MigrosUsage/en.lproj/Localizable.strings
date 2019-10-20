@@ -1,0 +1,3 @@
+// Localizable.strings English
+"usage-today" = "used %@ of %@.\n%@ remaining for today.";
+"usage-other" = "used %@ of %@.\n%@ remaining for the next %d Days.";
