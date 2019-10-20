@@ -7,7 +7,7 @@ import NotificationCenter
 class LoginViewController: UIViewController {
 	@IBOutlet weak var usernameInput: UITextField?
 	@IBOutlet weak var passwordInput: UITextField?
-
+	
 	@IBAction func login(sender: UIButton) {
 		let keychain = KeychainSwift()
 		if let username = usernameInput!.text, let password = passwordInput!.text {

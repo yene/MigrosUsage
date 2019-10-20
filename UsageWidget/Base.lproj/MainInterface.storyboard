@@ -16,18 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="clip" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XD-XA-Kd5">
-                                <rect key="frame" x="10" y="0.0" width="300" height="110"/>
-                                <string key="text">Placeholder
-test
-Xg</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XD-XA-Kd5">
+                                <rect key="frame" x="10" y="0.0" width="300" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="3XD-XA-Kd5" secondAttribute="bottom" id="0bS-Jh-o1u"/>
                             <constraint firstItem="3XD-XA-Kd5" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="DVt-1o-kRQ"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3XD-XA-Kd5" secondAttribute="trailing" constant="10" id="JTP-3M-sgU"/>
                             <constraint firstItem="3XD-XA-Kd5" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="10" id="Rda-5q-6Hq"/>
