@@ -32,27 +32,25 @@ class ViewController: UIViewController {
 		cv.isHidden = false
 		
 		let keychain = KeychainSwift()
-		if let username = keychain.get("username"), let password = keychain.get("password") {
-			print("found username in Keychain")
-			getMigrosUsage(username: username, password: password) { error, data in
-				if (error != "") {
-					self.errorLabel!.isHidden = false
-					self.errorLabel!.text = error
-					self.circleView!.isHidden = true
-					return
-				}
-				
-				let percentage = round((data.used / data.total) * 100)
-				let percentageInt = Int(percentage) // remove trailing .0
-				self.valueLabel!.text = "\(percentageInt)%"
-				print(percentage)
-				cv.startProgress(to: CGFloat(percentage), duration: 2.0)
-			}
-			
+		guard let username = keychain.get("username"), let password = keychain.get("password") else {
+			self.performSegue(withIdentifier: "gotoLogin", sender:self)
 			return
 		}
-		print("username does not exist in keychain")
-		self.performSegue(withIdentifier: "gotoLogin", sender:self)
+			
+		getMigrosUsage(username: username, password: password) { error, data in
+			if (error != "") {
+				self.errorLabel!.isHidden = false
+				self.errorLabel!.text = error
+				self.circleView!.isHidden = true
+				return
+			}
+			
+			let percentage = round((data.used / data.total) * 100)
+			let percentageInt = Int(percentage) // remove trailing .0
+			self.valueLabel!.text = "\(percentageInt)%"
+			print(percentage)
+			cv.startProgress(to: CGFloat(percentage), duration: 2.0)
+		}
 	}
 	
 	override func viewDidLoad() {

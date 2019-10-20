@@ -8,7 +8,7 @@ struct Usage {
 	let used: Double
 }
 
-// NOTE: with alamofire 5 the errors should be AFError
+// NOTE: with Alamofire 5 the errors should be AFError
 
 // completion is a function with first parameter Error string (empty if no error), second parameter is data.
 func getMigrosUsage(username: String, password: String, completion: @escaping (String, Usage) -> Void) {
@@ -18,17 +18,7 @@ func getMigrosUsage(username: String, password: String, completion: @escaping (S
 		case .success:
 			()
 		case .failure(let error):
-			// debugPrint(error)
-			// print("Error message:\(response.result.error!)")
-			// completionHandler(.failed)
 			let nserr = error as NSError
-			/*
-			print("\(nserr.domain)")
-			print("\(nserr.code)")
-			print("\(nserr.userInfo)")
-			print("\(nserr.localizedDescription)")
-			*/
-			
 			completion(nserr.localizedDescription, Usage(total: 0.0, used: 0.0))
 			return
 		}
@@ -48,8 +38,6 @@ func getMigrosUsage(username: String, password: String, completion: @escaping (S
 				case .success:
 					if let data = response.data, let html = String(data: data, encoding: .utf8) {
 						if (html.contains("error__title")) {
-							// self.label.text = "Invalid username or password"
-							// completionHandler(.failed)
 							completion("Invalid username or password", Usage(total: 0.0, used: 0.0))
 							return
 						}
@@ -60,19 +48,9 @@ func getMigrosUsage(username: String, password: String, completion: @escaping (S
 						let usedFloat = Double(parts[1].trimmingCharacters(in: .whitespacesAndNewlines)) ?? 0.0
 						let totalFloat = Double(parts[2].trimmingCharacters(in: .whitespacesAndNewlines)) ?? 0.0
 						let u = Usage(total: totalFloat, used: usedFloat)
-						/*
-						DispatchQueue.main.async {
-							self.label.text = l
-							spinner.stopAnimating()
-						}*/
-						
-						// completionHandler(NCUpdateResult.newData)
 						completion("", u)
 					}
 				case .failure(let error):
-					// debugPrint(error)
-					// print("Error message:\(response.result.error!)")
-					// completionHandler(.failed)
 					let nserr = error as NSError
 					completion(nserr.localizedDescription, Usage(total: 0.0, used: 0.0))
 				}
@@ -81,13 +59,39 @@ func getMigrosUsage(username: String, password: String, completion: @escaping (S
 	}
 }
 
+// new version of usage which returns GB with one fraction
+// Example Values: total: 3072.0, used: 2162.4
+func usageTextGB(totalFloat: Double, usedFloat: Double) -> String {
+	let formatter = NumberFormatter()
+	formatter.maximumFractionDigits = 1
+
+	let totalGB = formatter.string(from: NSNumber(value: (totalFloat / 1024)))! + " GB"
+	let usedGB = formatter.string(from: NSNumber(value: (usedFloat / 1024)))! + " GB"
+	let remainingGB = formatter.string(from:  NSNumber(value:(totalFloat-usedFloat) / 1024))! + " GB"
+	
+	// Calculate remaining days, by getting this months range
+	let interval = Calendar.current.dateInterval(of: .month, for: Date())!
+	let remainingDays = Calendar.current.dateComponents([.day], from: Date(), to: interval.end).day!
+	
+	let percentage = Int(round((usedFloat / totalFloat) * 100))
+	var l = "\(percentage)% "
+	if remainingDays == 0 {
+		l = l + String(format: NSLocalizedString("usage-today", comment: ""), usedGB, totalGB, remainingGB)
+	} else {
+		l = l + String(format: NSLocalizedString("usage-other", comment: ""), usedGB, totalGB, remainingGB, remainingDays)
+	}
+	return l
+}
+
+/*
+ByteCountFormatter is not capable to show only one digit after decimal point. It shows by default 0 fraction digits for bytes and KB; 1 fraction digits for MB; 2 for GB and above. If isAdaptive is set to false it tries to show at least three significant digits, introducing fraction digits as necessary.
+https://stackoverflow.com/a/51658718/279890
+*/
 func usageText(totalFloat: Double, usedFloat: Double) -> String {
 	let total = Int64(totalFloat * 1024 * 1024)
 	let used = Int64(usedFloat * 1024 * 1024)
-
 	let bcf = ByteCountFormatter()
 	bcf.allowedUnits = useGB ? [.useGB] : [.useMB]
-	bcf.isAdaptive = true // not fractions please
 	bcf.countStyle = .binary
 	let usedMB = bcf.string(fromByteCount: used)
 	let remainingMB = bcf.string(fromByteCount: total-used)
@@ -99,7 +103,7 @@ func usageText(totalFloat: Double, usedFloat: Double) -> String {
 	let remainingDays = Calendar.current.dateComponents([.day], from: Date(), to: interval.end).day!
 	
 	let percentage = Int(round((usedFloat / totalFloat) * 100))
-	var l = "\(percentage)% " // "Used \(usedMB) of \(totalMB).\n"
+	var l = "\(percentage)% "
 	if remainingDays == 0 {
 		l = l + String(format: NSLocalizedString("usage-today", comment: ""), usedMB, totalMB, remainingMB)
 	} else {

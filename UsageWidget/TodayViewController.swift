@@ -28,6 +28,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		spinner.hidesWhenStopped = true
 		self.view.addSubview(spinner)
 		spinner.center = self.view.center
+		spinner.startAnimating()
 	}
 	
 	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -52,7 +53,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 				return
 			}
 			DispatchQueue.main.async {
-				self.label!.text = usageText(totalFloat: data.total, usedFloat: data.used)
+				self.label!.text = usageTextGB(totalFloat: data.total, usedFloat: data.used)
 				spinner.stopAnimating()
 				completionHandler(.newData)
 			}
