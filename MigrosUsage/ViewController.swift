@@ -3,6 +3,8 @@
 import UIKit
 import KeychainSwift
 import UICircularProgressRing
+import AVFoundation
+import AVKit
 
 class ViewController: UIViewController {
 	@IBOutlet weak var removeCredentialsButton: UIButton?
@@ -38,7 +40,7 @@ class ViewController: UIViewController {
 			self.performSegue(withIdentifier: "gotoLogin", sender:self)
 			return
 		}
-			
+		
 		getMigrosUsage(username: username, password: password) { error, data in
 			if (error != "") {
 				self.errorLabel!.isHidden = false
@@ -49,10 +51,34 @@ class ViewController: UIViewController {
 			
 			self.usageLabel!.text = usageTextGB(totalFloat: data.total, usedFloat: data.used)
 			
-
 			let percentage = round((data.used / data.total) * 100)
 			cv.startProgress(to: CGFloat(percentage), duration: 2.0)
 		}
+	}
+	
+	let playerController = AVPlayerViewController()
+	
+	private func playVideo() {
+		// Mix audio with others, to prevent stopping them
+		try! AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, options: [AVAudioSession.CategoryOptions.mixWithOthers])
+		guard let path = Bundle.main.path(forResource: "how-to-add-widget", ofType: "mp4") else { return }
+		let player = AVPlayer(url: URL(fileURLWithPath: path))
+		player.isMuted = true
+		playerController.player = player
+		playerController.showsPlaybackControls = true
+		NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerController.player?.currentItem)
+		
+		present(playerController, animated: true) {
+			player.play()
+		}
+	}
+	
+	@objc func playerDidFinishPlaying(note: NSNotification) {
+		playerController.dismiss(animated: true, completion: nil)
+	}
+	
+	@IBAction func playTutorial(sender: UIButton) {
+		playVideo()
 	}
 	
 	override func viewDidLoad() {

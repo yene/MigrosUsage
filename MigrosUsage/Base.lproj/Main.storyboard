@@ -16,16 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxA-0w-nEz">
-                                <rect key="frame" x="20" y="511.5" width="374" height="64.5"/>
-                                <string key="text">You can add the Today Widget
- on the Spotlight screen. blabla
-
-lasdfllsadf</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-L0-gmM" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
                                 <rect key="frame" x="57" y="97" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,14 +71,22 @@ lasdfllsadf</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jB-f5-VUb">
+                                <rect key="frame" x="20" y="735" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="How to add Widget"/>
+                                <connections>
+                                    <action selector="playTutorialWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdQ-DS-mda"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5jB-f5-VUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bdc-4T-ny1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FAM-8G-OgS" secondAttribute="bottom" constant="20" id="Cjo-Oe-l2v"/>
                             <constraint firstItem="FAM-8G-OgS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U6a-gE-Drs"/>
-                            <constraint firstItem="mxA-0w-nEz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.2" id="Ype-ed-rb9"/>
-                            <constraint firstItem="mxA-0w-nEz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="utW-cC-YuE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mxA-0w-nEz" secondAttribute="trailing" constant="20" id="uyZ-qN-kJt"/>
+                            <constraint firstItem="FAM-8G-OgS" firstAttribute="top" secondItem="5jB-f5-VUb" secondAttribute="bottom" constant="25" id="o6z-Nf-uhe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5jB-f5-VUb" secondAttribute="trailing" constant="20" id="y16-is-FBP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FAM-8G-OgS" secondAttribute="trailing" constant="20" id="z0J-x2-3df"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

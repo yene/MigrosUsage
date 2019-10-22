@@ -2,5 +2,5 @@
 
 "Getting used data..." = "Getting used data...";
 "Please provide credentials." = "Please log-in in the app.";
-"usage-today" = "used %@ of %@. %@ remaining for today.";
-"usage-other" = "used %@ of %@. %@ remaining for the next %d Days.";
+"usage-today" = "used, %@ of %@.\n%@ remaining for today.";
+"usage-other" = "used, %@ of %@.\n%@ remaining for the next %d Days.";
