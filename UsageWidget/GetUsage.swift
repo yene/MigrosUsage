@@ -10,10 +10,27 @@ struct Usage {
 
 // NOTE: with Alamofire 5 the errors should be AFError
 
+let manager: SessionManager = {
+	let config = URLSessionConfiguration.default
+	config.timeoutIntervalForRequest = 10
+	config.timeoutIntervalForResource = 30
+	return Alamofire.SessionManager(configuration: config)
+}()
+
 // completion is a function with first parameter Error string (empty if no error), second parameter is data.
 func getMigrosUsage(username: String, password: String, completion: @escaping (String, Usage) -> Void) {
+	
+	/* # For disabling Alamofire certificate check
+	let serverTrustPolicies: [String: ServerTrustPolicy] = [
+	"selfcare.m-budget.migros.ch": .disableEvaluation
+	]
+	let sessionManager = SessionManager(
+	serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+	)
+	*/
+	
 	// Step 1: get the authenticity_token from https://selfcare.m-budget.migros.ch/eCare/de/users/sign_in
-	Alamofire.request("https://selfcare.m-budget.migros.ch/eCare/de/users/sign_in").responseData { response in
+	manager.request("https://selfcare.m-budget.migros.ch/eCare/de/users/sign_in").responseData { response in
 		switch response.result {
 		case .success:
 			()
@@ -33,7 +50,7 @@ func getMigrosUsage(username: String, password: String, completion: @escaping (S
 				"user[reseller]":	"33",
 			]
 			
-			Alamofire.request("https://selfcare.m-budget.migros.ch/eCare/de/users/sign_in", method: .post, parameters: parameters, encoding: URLEncoding.default).responseData { response in
+			manager.request("https://selfcare.m-budget.migros.ch/eCare/de/users/sign_in", method: .post, parameters: parameters, encoding: URLEncoding.default).responseData { response in
 				switch response.result {
 				case .success:
 					if let data = response.data, let html = String(data: data, encoding: .utf8) {
@@ -64,7 +81,7 @@ func getMigrosUsage(username: String, password: String, completion: @escaping (S
 func usageTextGB(totalFloat: Double, usedFloat: Double) -> String {
 	let formatter = NumberFormatter()
 	formatter.maximumFractionDigits = 1
-
+	
 	let totalGB = formatter.string(from: NSNumber(value: (totalFloat / 1024)))! + " GB"
 	let usedGB = formatter.string(from: NSNumber(value: (usedFloat / 1024)))! + " GB"
 	let remainingGB = formatter.string(from:  NSNumber(value:(totalFloat-usedFloat) / 1024))! + " GB"
@@ -72,7 +89,7 @@ func usageTextGB(totalFloat: Double, usedFloat: Double) -> String {
 	// Calculate remaining days, by getting this months range
 	let interval = Calendar.current.dateInterval(of: .month, for: Date())!
 	let remainingDays = Calendar.current.dateComponents([.day], from: Date(), to: interval.end).day!
-
+	
 	if remainingDays == 0 {
 		return String(format: NSLocalizedString("usage-today", comment: ""), usedGB, totalGB, remainingGB)
 	} else {
