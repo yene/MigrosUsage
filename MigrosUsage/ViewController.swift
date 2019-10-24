@@ -32,11 +32,13 @@ class ViewController: UIViewController {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		self.errorLabel!.isHidden = true
+		self.circleView!.isHidden = false
 		let cv = self.circleView!
 		cv.style = .ontop
 		cv.isHidden = false
 		cv.font = UIFont.systemFont(ofSize: 70.0, weight: .bold)
-		
+		cv.startProgress(to: 100, duration: 10.0) { // NOTE: use a similar timeout as Alamofire
+		}
 		
 		let keychain = KeychainSwift()
 		guard let username = keychain.get("username"), let password = keychain.get("password") else {
@@ -55,6 +57,7 @@ class ViewController: UIViewController {
 			self.usageLabel!.text = usageTextGB(totalFloat: data.total, usedFloat: data.used)
 			
 			let percentage = round((data.used / data.total) * 100)
+			cv.shouldShowValueText = true
 			cv.startProgress(to: CGFloat(percentage), duration: 2.0)
 		}
 	}

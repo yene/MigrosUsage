@@ -15,6 +15,7 @@ I needed a way to check how much data left on my data plan.
 - [X] Make text font accessible (Scaling Fonts)
 - [X] remove padding in today widget
 - [X] test big font size with widget, request more widget space if front is big
+- [X] handle connection error in main app
 
 ## Notes
 * Today Widget uses the Notifications icon

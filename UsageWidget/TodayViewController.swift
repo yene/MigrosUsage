@@ -7,20 +7,9 @@ import Alamofire
 
 /* # notes on today widget
 * Since iOS 10 extension's height is 110 pixels
-
-
 */
 
 let spinner = UIActivityIndicatorView(style: .whiteLarge)
-
-/* # For disabling Alamofire certificate check
-let serverTrustPolicies: [String: ServerTrustPolicy] = [
-"selfcare.m-budget.migros.ch": .disableEvaluation
-]
-let sessionManager = SessionManager(
-serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-)
-*/
 
 class TodayViewController: UIViewController, NCWidgetProviding {
 	@IBOutlet weak var label: UILabel!
