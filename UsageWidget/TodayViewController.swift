@@ -5,10 +5,15 @@ import NotificationCenter
 import KeychainSwift
 import Alamofire
 
+/* # notes on today widget
+* Since iOS 10 extension's height is 110 pixels
+
+
+*/
 
 let spinner = UIActivityIndicatorView(style: .whiteLarge)
 
-/* For disabling Alamofire certificate check
+/* # For disabling Alamofire certificate check
 let serverTrustPolicies: [String: ServerTrustPolicy] = [
 "selfcare.m-budget.migros.ch": .disableEvaluation
 ]
@@ -19,6 +24,7 @@ serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies
 
 class TodayViewController: UIViewController, NCWidgetProviding {
 	@IBOutlet weak var label: UILabel!
+	var labelHeight: CGFloat = 0.0;
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -29,6 +35,25 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		self.view.addSubview(spinner)
 		spinner.center = self.view.center
 		spinner.startAnimating()
+	}
+	
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		labelHeight = self.label.frame.size.height
+		if (labelHeight > 110) {
+			extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+		} else {
+			extensionContext?.widgetLargestAvailableDisplayMode = .compact
+		}
+	}
+	
+	func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+		
+		if (activeDisplayMode == NCWidgetDisplayMode.compact) {
+			self.preferredContentSize = maxSize;
+		} else {
+			self.preferredContentSize = CGSize(width: 0, height: labelHeight + 5.0);
+		}
 	}
 	
 	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
