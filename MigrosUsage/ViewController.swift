@@ -13,18 +13,21 @@ class ViewController: UIViewController {
 	@IBOutlet weak var usageLabel: UILabel?
 	
 	@IBAction func removeCredentials(sender: UIButton) {
-		let dialogMessage = UIAlertController(title: NSLocalizedString("Confirm", comment: ""), message: NSLocalizedString("Are you sure?", comment: ""), preferredStyle: .alert)
+		let alertController = UIAlertController(title: NSLocalizedString("Are you sure?", comment: ""), message: NSLocalizedString("", comment: ""), preferredStyle: .alert)
 		
-		let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { (action) -> Void in
+		let removeAction = UIAlertAction(title: NSLocalizedString("Remove", comment: ""), style: .destructive, handler: { (action) -> Void in
 			let keychain = KeychainSwift()
 			keychain.clear()
 			self.performSegue(withIdentifier: "gotoLogin", sender:self)
 		})
-		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-		cancelAction.setValue(UIColor.red, forKey: "titleTextColor")
-		dialogMessage.addAction(okAction)
-		dialogMessage.addAction(cancelAction)
-		self.present(dialogMessage, animated: true, completion: nil)
+		// okAction.setValue(UIColor.red, forKey: "titleTextColor")
+
+		let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default)
+		alertController.addAction(cancelAction)
+		alertController.addAction(removeAction)
+		alertController.preferredAction = removeAction
+		
+		self.present(alertController, animated: true, completion: nil)
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {

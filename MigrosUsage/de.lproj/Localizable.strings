@@ -1,7 +1,7 @@
 // Localizable.strings German
 
-"Confirm" = "Bestätigen";
 "Cancel" = "Abbrechen";
-"Are you sure?" = "Möchten Sie wirklich fortfahren";
+"Are you sure?" = "Möchten Sie wirklich fortfahren?";
 "usage-today" = "%@ von %@ benutzt.\n%@ übrig.";
 "usage-other" = "%@ von %@ benutzt.\n%@ übrig für die nächsten %d Tage.";
+"Remove" = "Entfernen";

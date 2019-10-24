@@ -14,6 +14,7 @@ I needed a way to check how much data left on my data plan.
 - [X] move account button to the bottom
 - [X] Make text font accessible (Scaling Fonts)
 - [X] remove padding in today widget
+- [ ] test big font size with widget, request more widget space if front is big
 
 ## Notes
 * Today Widget uses the Notifications icon
