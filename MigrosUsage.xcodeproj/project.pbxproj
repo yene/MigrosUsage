@@ -24,7 +24,7 @@
 		ACA93E1C22EF2092001DC560 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */; };
 		ACA93E1F22EF2092001DC560 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA93E1E22EF2092001DC560 /* TodayViewController.swift */; };
 		ACA93E2222EF2092001DC560 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA93E2022EF2092001DC560 /* MainInterface.storyboard */; };
-		ACA93E2622EF2092001DC560 /* UsageWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ACA93E1B22EF2092001DC560 /* UsageWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ACA93E2622EF2092001DC560 /* M-Usage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ACA93E1B22EF2092001DC560 /* M-Usage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ACD89D6022ECE07B00166B04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */; };
 		ACF18EED22ECC14300B2A751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */; };
 		ACF18EEF22ECC14300B2A751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18EEE22ECC14300B2A751 /* ViewController.swift */; };
@@ -90,7 +90,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				ACA93E2622EF2092001DC560 /* UsageWidget.appex in Embed App Extensions */,
+				ACA93E2622EF2092001DC560 /* M-Usage.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +110,7 @@
 		AC9A8633234F818500E04F6F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		AC9EB8D722EF66320010AD0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ACA93E1B22EF2092001DC560 /* UsageWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UsageWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA93E1B22EF2092001DC560 /* M-Usage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "M-Usage.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA93E1E22EF2092001DC560 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		ACA93E2122EF2092001DC560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		ACA93E2A22EF2218001DC560 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		ACA93E2E22EF2E67001DC560 /* MigrosUsage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MigrosUsage.entitlements; sourceTree = "<group>"; };
 		ACA93E6522EF3155001DC560 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-4.8.2/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		ACF18EE922ECC14300B2A751 /* MigrosUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MigrosUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACF18EE922ECC14300B2A751 /* M-Usage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M-Usage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF18EEE22ECC14300B2A751 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACF18EF122ECC14300B2A751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -197,8 +197,8 @@
 		ACF18EEA22ECC14300B2A751 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ACF18EE922ECC14300B2A751 /* MigrosUsage.app */,
-				ACA93E1B22EF2092001DC560 /* UsageWidget.appex */,
+				ACF18EE922ECC14300B2A751 /* M-Usage.app */,
+				ACA93E1B22EF2092001DC560 /* M-Usage.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 			);
 			name = UsageWidget;
 			productName = UsageWidget;
-			productReference = ACA93E1B22EF2092001DC560 /* UsageWidget.appex */;
+			productReference = ACA93E1B22EF2092001DC560 /* M-Usage.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		ACF18EE822ECC14300B2A751 /* MigrosUsage */ = {
@@ -272,7 +272,7 @@
 				AC99A49A2354CAF90006DFD2 /* UICircularProgressRing */,
 			);
 			productName = MigrosUsage;
-			productReference = ACF18EE922ECC14300B2A751 /* MigrosUsage.app */;
+			productReference = ACF18EE922ECC14300B2A751 /* M-Usage.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -498,10 +498,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "M-Usage";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -519,10 +519,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "M-Usage";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -659,7 +659,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "M-Usage";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -680,7 +680,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "M-Usage";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
