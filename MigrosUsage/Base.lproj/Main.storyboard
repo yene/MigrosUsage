@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -11,15 +11,18 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MigrosUsage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="M_Usage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-L0-gmM" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="57" y="97" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-L0-gmM" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="57" y="92" width="300" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7hX-rj-IDZ"/>
+                                    <constraint firstAttribute="width" constant="300" id="Nrl-QD-ZqL"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
                                         <real key="value" value="0.0"/>
@@ -49,43 +52,49 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unv-fZ-G2U">
-                                <rect key="frame" x="57" y="97" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unv-fZ-G2U">
+                                <rect key="frame" x="20" y="100" width="374" height="31.333333333333343"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAM-8G-OgS">
-                                <rect key="frame" x="20" y="801" width="374" height="41"/>
+                                <rect key="frame" x="20" y="675" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Remove Credentials"/>
                                 <connections>
                                     <action selector="removeCredentialsWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pW1-xR-BJq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QL-aI-Dhc">
-                                <rect key="frame" x="20" y="416" width="374" height="64.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jB-f5-VUb">
-                                <rect key="frame" x="20" y="735" width="374" height="41"/>
+                                <rect key="frame" x="20" y="619" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="How to add Widget"/>
                                 <connections>
                                     <action selector="playTutorialWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdQ-DS-mda"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QL-aI-Dhc">
+                                <rect key="frame" x="207" y="417" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Unv-fZ-G2U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1MY-Gb-2C0"/>
                             <constraint firstItem="5jB-f5-VUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bdc-4T-ny1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FAM-8G-OgS" secondAttribute="bottom" constant="20" id="Cjo-Oe-l2v"/>
+                            <constraint firstItem="Unv-fZ-G2U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="I8r-24-bWJ"/>
                             <constraint firstItem="FAM-8G-OgS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U6a-gE-Drs"/>
-                            <constraint firstItem="FAM-8G-OgS" firstAttribute="top" secondItem="5jB-f5-VUb" secondAttribute="bottom" constant="25" id="o6z-Nf-uhe"/>
+                            <constraint firstItem="8QL-aI-Dhc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="V40-Vx-NOf"/>
+                            <constraint firstItem="ZMU-L0-gmM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZjN-Dh-BTN"/>
+                            <constraint firstItem="Unv-fZ-G2U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bQZ-lH-Lgh"/>
+                            <constraint firstItem="8QL-aI-Dhc" firstAttribute="top" secondItem="ZMU-L0-gmM" secondAttribute="bottom" constant="25" id="ea2-c3-qp0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Unv-fZ-G2U" secondAttribute="trailing" constant="20" id="ekv-fl-BiD"/>
+                            <constraint firstItem="ZMU-L0-gmM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerYWithinMargins" multiplier="0.25" id="ghe-UJ-bKr"/>
+                            <constraint firstItem="FAM-8G-OgS" firstAttribute="top" secondItem="5jB-f5-VUb" secondAttribute="bottom" constant="15" id="o6z-Nf-uhe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5jB-f5-VUb" secondAttribute="trailing" constant="20" id="y16-is-FBP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FAM-8G-OgS" secondAttribute="trailing" constant="20" id="z0J-x2-3df"/>
                         </constraints>
@@ -101,14 +110,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60.869565217391312" y="-30.133928571428569"/>
+            <point key="canvasLocation" x="60.869565217391312" y="-30.163043478260871"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Xpu-Hv-M27">
             <objects>
-                <viewController id="CLM-rT-cDe" customClass="LoginViewController" customModule="MigrosUsage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CLM-rT-cDe" customClass="LoginViewController" customModule="M_Usage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L92-Kg-rsS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uzf-Y1-vub">
@@ -146,10 +155,11 @@
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiD-EJ-M6A">
-                                <rect key="frame" x="157" y="192" width="100" height="30"/>
+                                <rect key="frame" x="157" y="192" width="100" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="aXB-Z5-IVg"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginWithSender:" destination="CLM-rT-cDe" eventType="touchUpInside" id="MYP-YC-NEy"/>
@@ -174,9 +184,11 @@
                     <connections>
                         <outlet property="passwordInput" destination="Uzf-Y1-vub" id="Fnn-Ik-v22"/>
                         <outlet property="usernameInput" destination="Vdd-Z1-X5e" id="6fU-NL-vS7"/>
+                        <segue destination="F12-Va-6RT" kind="unwind" identifier="closeLogin" unwindAction="unwindToVCWithSegue:" id="lmV-oX-OYm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Dr-5d-lwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="F12-Va-6RT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="953.62318840579712" y="-267.1875"/>
         </scene>

@@ -11,6 +11,7 @@
 		AC077B13235794E000EC43A9 /* GetUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC077B11235794E000EC43A9 /* GetUsage.swift */; };
 		AC077B16235B63BA00EC43A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC077B18235B63BA00EC43A9 /* Localizable.strings */; };
 		AC077B1B235C6F2600EC43A9 /* how-to-add-widget.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC077B1A235C6F2500EC43A9 /* how-to-add-widget.mp4 */; };
+		AC8CA8302368AC4400E14CC7 /* m-usage-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC8CA82F2368AC4300E14CC7 /* m-usage-logo.png */; };
 		AC99A474235359B20006DFD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC99A476235359B20006DFD2 /* InfoPlist.strings */; };
 		AC99A49B2354CAF90006DFD2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = AC99A49A2354CAF90006DFD2 /* UICircularProgressRing */; };
 		AC9A8625234F7D8100E04F6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC9A8627234F7D8100E04F6F /* Localizable.strings */; };
@@ -24,13 +25,12 @@
 		ACA93E1C22EF2092001DC560 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */; };
 		ACA93E1F22EF2092001DC560 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA93E1E22EF2092001DC560 /* TodayViewController.swift */; };
 		ACA93E2222EF2092001DC560 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA93E2022EF2092001DC560 /* MainInterface.storyboard */; };
-		ACA93E2622EF2092001DC560 /* M-Usage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ACA93E1B22EF2092001DC560 /* M-Usage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ACA93E2622EF2092001DC560 /* M-Usage Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ACA93E1B22EF2092001DC560 /* M-Usage Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ACD89D6022ECE07B00166B04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */; };
 		ACF18EED22ECC14300B2A751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */; };
 		ACF18EEF22ECC14300B2A751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF18EEE22ECC14300B2A751 /* ViewController.swift */; };
 		ACF18EF222ECC14300B2A751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF022ECC14300B2A751 /* Main.storyboard */; };
 		ACF18EF722ECC14600B2A751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EF522ECC14600B2A751 /* LaunchScreen.storyboard */; };
-		ACF18EFF22ECC41F00B2A751 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF18EFE22ECC41F00B2A751 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +90,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				ACA93E2622EF2092001DC560 /* M-Usage.appex in Embed App Extensions */,
+				ACA93E2622EF2092001DC560 /* M-Usage Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +102,8 @@
 		AC077B17235B63BA00EC43A9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC077B19235C6BC700EC43A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC077B1A235C6F2500EC43A9 /* how-to-add-widget.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "how-to-add-widget.mp4"; sourceTree = "<group>"; };
+		AC8CA82E2368A9E800E14CC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC8CA82F2368AC4300E14CC7 /* m-usage-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m-usage-logo.png"; sourceTree = "<group>"; };
 		AC99A475235359B20006DFD2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC9A8622234F7B1A00E04F6F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		AC9A8626234F7D8100E04F6F /* en */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -110,7 +112,7 @@
 		AC9A8633234F818500E04F6F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC9EB8A922EF58C90010AD0F /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		AC9EB8D722EF66320010AD0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ACA93E1B22EF2092001DC560 /* M-Usage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "M-Usage.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA93E1B22EF2092001DC560 /* M-Usage Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "M-Usage Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA93E1E22EF2092001DC560 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		ACA93E2122EF2092001DC560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		ACA93E2A22EF2218001DC560 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -124,7 +126,6 @@
 		ACF18EF122ECC14300B2A751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACF18EF622ECC14600B2A751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF18EF822ECC14600B2A751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACF18EFE22ECC41F00B2A751 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		ACF18F0622ECC5D400B2A751 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -198,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				ACF18EE922ECC14300B2A751 /* M-Usage.app */,
-				ACA93E1B22EF2092001DC560 /* M-Usage.appex */,
+				ACA93E1B22EF2092001DC560 /* M-Usage Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,9 +207,9 @@
 		ACF18EEB22ECC14300B2A751 /* MigrosUsage */ = {
 			isa = PBXGroup;
 			children = (
+				AC8CA82F2368AC4300E14CC7 /* m-usage-logo.png */,
 				AC077B1A235C6F2500EC43A9 /* how-to-add-widget.mp4 */,
 				ACA93E2E22EF2E67001DC560 /* MigrosUsage.entitlements */,
-				ACF18EFE22ECC41F00B2A751 /* logo.png */,
 				ACF18EEC22ECC14300B2A751 /* AppDelegate.swift */,
 				ACF18EEE22ECC14300B2A751 /* ViewController.swift */,
 				ACD89D5F22ECE07B00166B04 /* LoginViewController.swift */,
@@ -247,7 +248,7 @@
 			);
 			name = UsageWidget;
 			productName = UsageWidget;
-			productReference = ACA93E1B22EF2092001DC560 /* M-Usage.appex */;
+			productReference = ACA93E1B22EF2092001DC560 /* M-Usage Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		ACF18EE822ECC14300B2A751 /* MigrosUsage */ = {
@@ -368,7 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF18EFF22ECC41F00B2A751 /* logo.png in Resources */,
+				AC8CA8302368AC4400E14CC7 /* m-usage-logo.png in Resources */,
 				AC077B16235B63BA00EC43A9 /* Localizable.strings in Resources */,
 				AC9EB8D822EF66320010AD0F /* Images.xcassets in Resources */,
 				ACF18EF722ECC14600B2A751 /* LaunchScreen.storyboard in Resources */,
@@ -452,6 +453,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AC9A8632234F80D800E04F6F /* de */,
+				AC8CA82E2368A9E800E14CC7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -498,7 +500,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
-				PRODUCT_NAME = "M-Usage";
+				PRODUCT_NAME = "M-Usage Widget";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -519,7 +521,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.yannick.MigrosUsage.UsageWidget;
-				PRODUCT_NAME = "M-Usage";
+				PRODUCT_NAME = "M-Usage Widget";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

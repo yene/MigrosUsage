@@ -30,6 +30,15 @@ class ViewController: UIViewController {
 		self.present(alertController, animated: true, completion: nil)
 	}
 	
+	@IBAction func unwindToVC(segue: UIStoryboardSegue) {
+		// how to make an unwind... https://stackoverflow.com/questions/12509422/how-to-perform-unwind-segue-programmatically
+		print("i am back")
+		let result = getData()
+		if !result {
+			self.performSegue(withIdentifier: "gotoLogin", sender:self)
+		}
+	}
+	
 	override func viewDidAppear(_ animated: Bool) {
 		self.errorLabel!.isHidden = true
 		self.circleView!.isHidden = false
@@ -37,13 +46,26 @@ class ViewController: UIViewController {
 		cv.style = .ontop
 		cv.isHidden = false
 		cv.font = UIFont.systemFont(ofSize: 70.0, weight: .bold)
-		cv.startProgress(to: 100, duration: 10.0) { // NOTE: use a similar timeout as Alamofire
-		}
 		
+		let result = getData()
+		if !result {
+			self.performSegue(withIdentifier: "gotoLogin", sender:self)
+		}
+	}
+	
+	func getData() -> Bool {
 		let keychain = KeychainSwift()
 		guard let username = keychain.get("username"), let password = keychain.get("password") else {
-			self.performSegue(withIdentifier: "gotoLogin", sender:self)
-			return
+			return false
+		}
+		
+		if username == "" || password == "" {
+			return false
+		}
+		
+		
+		let cv = self.circleView!
+		cv.startProgress(to: 100, duration: 10.0) { // NOTE: use a similar timeout as Alamofire
 		}
 		
 		getMigrosUsage(username: username, password: password) { error, data in
@@ -60,7 +82,9 @@ class ViewController: UIViewController {
 			cv.shouldShowValueText = true
 			cv.startProgress(to: CGFloat(percentage), duration: 2.0)
 		}
+		return true
 	}
+	
 	
 	let playerController = AVPlayerViewController()
 	

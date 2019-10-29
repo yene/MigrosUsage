@@ -10,18 +10,21 @@ class LoginViewController: UIViewController {
 	
 	@IBAction func login(sender: UIButton) {
 		let keychain = KeychainSwift()
+		
 		if let username = usernameInput!.text, let password = passwordInput!.text {
 			keychain.set(username, forKey: "username")
 			keychain.set(password, forKey: "password")
 			print(username, password)
 			// inform widget to load
 			NCWidgetController().setHasContent(true, forWidgetWithBundleIdentifier: "dev.yannick.MigrosUsage.UsageWidget")
-			self.dismiss(animated: true, completion: nil)
+			// self.dismiss(animated: true, completion: nil)
+			self.performSegue(withIdentifier: "closeLogin", sender:self)
 		} else {
 			// TODO: improve error handling
 			print("show error dialog")
 		}
 	}
+
 	
 	override func viewDidAppear(_ animated: Bool) {
 		self.usernameInput?.becomeFirstResponder()

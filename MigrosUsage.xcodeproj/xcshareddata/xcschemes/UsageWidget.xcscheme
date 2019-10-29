@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ACA93E1A22EF2092001DC560"
-               BuildableName = "UsageWidget.appex"
+               BuildableName = "M-Usage Widget.appex"
                BlueprintName = "UsageWidget"
                ReferencedContainer = "container:MigrosUsage.xcodeproj">
             </BuildableReference>
@@ -30,7 +30,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ACF18EE822ECC14300B2A751"
-               BuildableName = "MigrosUsage.app"
+               BuildableName = "M-Usage.app"
                BlueprintName = "MigrosUsage"
                ReferencedContainer = "container:MigrosUsage.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ACA93E1A22EF2092001DC560"
-            BuildableName = "UsageWidget.appex"
+            BuildableName = "M-Usage Widget.appex"
             BlueprintName = "UsageWidget"
             ReferencedContainer = "container:MigrosUsage.xcodeproj">
          </BuildableReference>
@@ -73,7 +73,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ACA93E1A22EF2092001DC560"
-            BuildableName = "UsageWidget.appex"
+            BuildableName = "M-Usage Widget.appex"
             BlueprintName = "UsageWidget"
             ReferencedContainer = "container:MigrosUsage.xcodeproj">
          </BuildableReference>
@@ -91,7 +91,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ACF18EE822ECC14300B2A751"
-            BuildableName = "MigrosUsage.app"
+            BuildableName = "M-Usage.app"
             BlueprintName = "MigrosUsage"
             ReferencedContainer = "container:MigrosUsage.xcodeproj">
          </BuildableReference>
