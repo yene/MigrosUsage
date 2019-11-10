@@ -20,8 +20,7 @@ class ViewController: UIViewController {
 			keychain.clear()
 			self.performSegue(withIdentifier: "gotoLogin", sender:self)
 		})
-		// okAction.setValue(UIColor.red, forKey: "titleTextColor")
-
+		
 		let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default)
 		alertController.addAction(cancelAction)
 		alertController.addAction(removeAction)
@@ -32,7 +31,6 @@ class ViewController: UIViewController {
 	
 	@IBAction func unwindToVC(segue: UIStoryboardSegue) {
 		// how to make an unwind... https://stackoverflow.com/questions/12509422/how-to-perform-unwind-segue-programmatically
-		print("i am back")
 		let result = getData()
 		if !result {
 			self.performSegue(withIdentifier: "gotoLogin", sender:self)
@@ -63,7 +61,6 @@ class ViewController: UIViewController {
 			return false
 		}
 		
-		
 		let cv = self.circleView!
 		cv.startProgress(to: 100, duration: 10.0) { // NOTE: use a similar timeout as Alamofire
 		}
@@ -84,7 +81,6 @@ class ViewController: UIViewController {
 		}
 		return true
 	}
-	
 	
 	let playerController = AVPlayerViewController()
 	

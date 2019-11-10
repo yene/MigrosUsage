@@ -37,7 +37,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	}
 	
 	func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
-		
 		if (activeDisplayMode == NCWidgetDisplayMode.compact) {
 			self.preferredContentSize = maxSize;
 		} else {
