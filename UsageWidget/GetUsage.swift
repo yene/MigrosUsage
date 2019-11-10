@@ -90,35 +90,6 @@ func usageTextGB(totalFloat: Double, usedFloat: Double) -> String {
 	}
 }
 
-/*
-ByteCountFormatter is not capable to show only one digit after decimal point. It shows by default 0 fraction digits for bytes and KB; 1 fraction digits for MB; 2 for GB and above. If isAdaptive is set to false it tries to show at least three significant digits, introducing fraction digits as necessary.
-https://stackoverflow.com/a/51658718/279890
-*/
-func usageText(totalFloat: Double, usedFloat: Double) -> String {
-	let total = Int64(totalFloat * 1024 * 1024)
-	let used = Int64(usedFloat * 1024 * 1024)
-	let bcf = ByteCountFormatter()
-	bcf.allowedUnits = useGB ? [.useGB] : [.useMB]
-	bcf.countStyle = .binary
-	let usedMB = bcf.string(fromByteCount: used)
-	let remainingMB = bcf.string(fromByteCount: total-used)
-	bcf.allowedUnits = [.useGB]
-	let totalMB = bcf.string(fromByteCount: total)
-	
-	// Calculate remaining days, by getting this months range
-	let interval = Calendar.current.dateInterval(of: .month, for: Date())!
-	let remainingDays = Calendar.current.dateComponents([.day], from: Date(), to: interval.end).day!
-	
-	let percentage = Int(round((usedFloat / totalFloat) * 100))
-	var l = "\(percentage)% "
-	if remainingDays == 0 {
-		l = l + String(format: NSLocalizedString("usage-today", comment: ""), usedMB, totalMB, remainingMB)
-	} else {
-		l = l + String(format: NSLocalizedString("usage-other", comment: ""), usedMB, totalMB, remainingMB, remainingDays)
-	}
-	return l
-}
-
 func extract(from: String, between: String, and: String) -> String {
 	if let range = from.range(of: between) {
 		let substring = from[range.upperBound..<from.endIndex]
