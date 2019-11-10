@@ -68,7 +68,7 @@ class ViewController: UIViewController {
 		cv.startProgress(to: 100, duration: 10.0) { // NOTE: use a similar timeout as Alamofire
 		}
 		
-		getMigrosUsage(username: username, password: password) { error, data in
+		getUsageFromPortal(username: username, password: password) { error, data in
 			if (error != "") {
 				self.errorLabel!.isHidden = false
 				self.errorLabel!.text = error

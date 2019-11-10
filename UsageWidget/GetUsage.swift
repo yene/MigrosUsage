@@ -1,7 +1,7 @@
 import Foundation
 import Alamofire
 
-let useGB = true // because not everyone understands GB vs MB
+let useGB = true // We display only GB, so to not confuse older people.
 
 struct Usage {
 	let total: Double
@@ -9,7 +9,6 @@ struct Usage {
 }
 
 // NOTE: with Alamofire 5 the errors should be AFError
-
 let manager: SessionManager = {
 	let config = URLSessionConfiguration.default
 	config.timeoutIntervalForRequest = 10
@@ -17,19 +16,12 @@ let manager: SessionManager = {
 	return Alamofire.SessionManager(configuration: config)
 }()
 
-// completion is a function with first parameter Error string (empty if no error), second parameter is data.
-func getMigrosUsage(username: String, password: String, completion: @escaping (String, Usage) -> Void) {
+// getUsageFromPortal
+// Logs into the ISPs portal and extracts the usage data from HTML.
+// completion is a closure with first parameter Error string (empty if no error), second parameter is the data.
+func getUsageFromPortal(username: String, password: String, completion: @escaping (String, Usage) -> Void) {
 	
-	/* # For disabling Alamofire certificate check
-	let serverTrustPolicies: [String: ServerTrustPolicy] = [
-	"selfcare.m-budget.migros.ch": .disableEvaluation
-	]
-	let sessionManager = SessionManager(
-	serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-	)
-	*/
-	
-	// Step 1: get the authenticity_token from https://selfcare.m-budget.migros.ch/eCare/de/users/sign_in
+	// Step 1: Extract the authenticity_token from HTML
 	manager.request("https://selfcare.m-budget.migros.ch/eCare/de/users/sign_in").responseData { response in
 		switch response.result {
 		case .success:
@@ -50,6 +42,7 @@ func getMigrosUsage(username: String, password: String, completion: @escaping (S
 				"user[reseller]":	"33",
 			]
 			
+			// Step 1: Log-in and extract usage from HTML.
 			manager.request("https://selfcare.m-budget.migros.ch/eCare/de/users/sign_in", method: .post, parameters: parameters, encoding: URLEncoding.default).responseData { response in
 				switch response.result {
 				case .success:

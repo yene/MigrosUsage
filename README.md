@@ -6,9 +6,13 @@ I needed a solution to quickly check how much data is left on my M-Budget Mobile
 
 
 ## Notes
-* It just logs into the users profile page and grabs the infos from HTML, maybe you can use the code for your own app?
-* Today Widget uses the Notifications icon
-* Getting the data is a bit slow: logging into migros care portal requires an auth token, and it redirects you twice.
+* It does a log-in into the users profile page and extracts the usage information from HTML, maybe you can use the code for your own app?
+* Today Widget uses the Notifications icon.
+* Getting the data is a bit slow because it needs about 4 HTTP requests to get the data.
+* The login data is shared with the Today Widget, over the Keychain.
 
 ## TODO
 - [ ] investigate why the widget sometimes starts with an error message
+
+
+![app](app.gif)

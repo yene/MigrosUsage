@@ -58,7 +58,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 			completionHandler(.failed)
 			return
 		}
-		getMigrosUsage(username: username, password: password) { error, data in
+		getUsageFromPortal(username: username, password: password) { error, data in
 			if (error != "") {
 				self.label.textAlignment = .center
 				self.label!.text = error
