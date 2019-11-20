@@ -9,21 +9,37 @@ import Alamofire
 * Since iOS 10 extension's height is 110 pixels
 */
 
-let spinner = UIActivityIndicatorView(style: .whiteLarge)
 
 class TodayViewController: UIViewController, NCWidgetProviding {
 	@IBOutlet weak var label: UILabel!
+	@IBOutlet weak var spinner: UIActivityIndicatorView!
+	
 	var labelHeight: CGFloat = 0.0;
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-		spinner.hidesWhenStopped = true
-		self.view.addSubview(spinner)
-		spinner.center = self.view.center
-		spinner.startAnimating()
+		self.label.text = ""
+		self.label.textAlignment = .left
+		let keychain = KeychainSwift()
+		keychain.accessGroup = "NDJHDNKXD6.dev.yannick.MigrosUsage"
+		
+		guard let username = keychain.get("username"), let password = keychain.get("password") else {
+			self.label.text = NSLocalizedString("Please provide credentials.", comment: "")
+			return
+		}
+		getUsageFromPortal(username: username, password: password) { error, data in
+			if (error != "") {
+				self.label.textAlignment = .center
+				self.label!.text = error
+				self.spinner.stopAnimating()
+				return
+			}
+			DispatchQueue.main.async {
+				let percentage = Int(round((data.used / data.total) * 100))
+				self.label!.text = "\(percentage)% " + usageTextGB(totalFloat: data.total, usedFloat: data.used)
+				self.spinner.stopAnimating()
+			}
+		}
 	}
 	
 	override func viewDidLayoutSubviews() {
@@ -44,33 +60,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		}
 	}
 	
-	func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-		self.label.text = ""
-		self.label.textAlignment = .left
-		spinner.startAnimating()
-		
-		let keychain = KeychainSwift()
-		keychain.accessGroup = "NDJHDNKXD6.dev.yannick.MigrosUsage"
-		
-		guard let username = keychain.get("username"), let password = keychain.get("password") else {
-			self.label.text = NSLocalizedString("Please provide credentials.", comment: "")
-			completionHandler(.failed)
-			return
-		}
-		getUsageFromPortal(username: username, password: password) { error, data in
-			if (error != "") {
-				self.label.textAlignment = .center
-				self.label!.text = error
-				spinner.stopAnimating()
-				completionHandler(.failed)
-				return
-			}
-			DispatchQueue.main.async {
-				let percentage = Int(round((data.used / data.total) * 100))
-				self.label!.text = "\(percentage)% " + usageTextGB(totalFloat: data.total, usedFloat: data.used)
-				spinner.stopAnimating()
-				completionHandler(.newData)
-			}
-		}
-	}
+	// Not implementing widgetPerformUpdate means our app will not be called in the background.
+	// func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {}
 }

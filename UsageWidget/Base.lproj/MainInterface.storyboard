@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,22 +11,27 @@
         <!--Today View Controller-->
         <scene sceneID="cwh-vc-ff4">
             <objects>
-                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="UsageWidget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="M_Usage_Widget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XD-XA-Kd5">
-                                <rect key="frame" x="10" y="0.0" width="300" height="31.5"/>
+                                <rect key="frame" x="10" y="0.0" width="300" height="33.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="sbD-Ie-Jj3">
+                                <rect key="frame" x="141.5" y="36.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="sbD-Ie-Jj3" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="7Rp-cg-wcR"/>
                             <constraint firstItem="3XD-XA-Kd5" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="DVt-1o-kRQ"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="3XD-XA-Kd5" secondAttribute="trailing" constant="10" id="JTP-3M-sgU"/>
                             <constraint firstItem="3XD-XA-Kd5" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="10" id="Rda-5q-6Hq"/>
+                            <constraint firstItem="sbD-Ie-Jj3" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="yLv-PP-jwn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
@@ -35,6 +40,7 @@
                     <size key="freeformSize" width="320" height="110"/>
                     <connections>
                         <outlet property="label" destination="3XD-XA-Kd5" id="myW-Df-6Lh"/>
+                        <outlet property="spinner" destination="sbD-Ie-Jj3" id="sDm-nv-iAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
