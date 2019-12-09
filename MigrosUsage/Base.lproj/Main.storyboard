@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-L0-gmM" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="57" y="92" width="300" height="300"/>
+                                <rect key="frame" x="82" y="92" width="250" height="250"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="7hX-rj-IDZ"/>
-                                    <constraint firstAttribute="width" constant="300" id="Nrl-QD-ZqL"/>
+                                    <constraint firstAttribute="height" constant="250" id="7hX-rj-IDZ"/>
+                                    <constraint firstAttribute="width" constant="250" id="Nrl-QD-ZqL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
@@ -53,9 +53,9 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unv-fZ-G2U">
-                                <rect key="frame" x="20" y="100" width="374" height="31.333333333333343"/>
+                                <rect key="frame" x="20" y="100" width="374" height="33.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAM-8G-OgS">
@@ -75,7 +75,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QL-aI-Dhc">
-                                <rect key="frame" x="207" y="417" width="0.0" height="0.0"/>
+                                <rect key="frame" x="5" y="367" width="404" height="0.0"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,8 +84,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Unv-fZ-G2U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1MY-Gb-2C0"/>
+                            <constraint firstItem="8QL-aI-Dhc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="2iB-xY-u0S"/>
                             <constraint firstItem="5jB-f5-VUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Bdc-4T-ny1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FAM-8G-OgS" secondAttribute="bottom" constant="20" id="Cjo-Oe-l2v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8QL-aI-Dhc" secondAttribute="trailing" constant="5" id="Fyl-Kq-V6r"/>
                             <constraint firstItem="Unv-fZ-G2U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="I8r-24-bWJ"/>
                             <constraint firstItem="FAM-8G-OgS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U6a-gE-Drs"/>
                             <constraint firstItem="8QL-aI-Dhc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="V40-Vx-NOf"/>
@@ -155,7 +157,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiD-EJ-M6A">
-                                <rect key="frame" x="157" y="192" width="100" height="36"/>
+                                <rect key="frame" x="157" y="192" width="100" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="aXB-Z5-IVg"/>
                                 </constraints>

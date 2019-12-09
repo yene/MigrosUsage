@@ -35,8 +35,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 				return
 			}
 			DispatchQueue.main.async {
-				let percentage = Int(round((data.used / data.total) * 100))
-				self.label!.text = "\(percentage)% " + usageTextGB(totalFloat: data.total, usedFloat: data.used)
+				let dataRemaing = data.total - data.used
+				let percentage = round((dataRemaing / data.total) * 100)
+				self.label!.text = "\(Int(percentage))% " + usageTextGB(totalFloat: data.total, usedFloat: data.used)
 				self.spinner.stopAnimating()
 			}
 		}

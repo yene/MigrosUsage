@@ -79,7 +79,7 @@ func usageTextGB(totalFloat: Double, usedFloat: Double) -> String {
 	
 	let totalGB = formatter.string(from: NSNumber(value: (totalFloat / 1024)))! + " GB"
 	let usedGB = formatter.string(from: NSNumber(value: (usedFloat / 1024)))! + " GB"
-	let remainingGB = formatter.string(from:  NSNumber(value:(totalFloat-usedFloat) / 1024))! + " GB"
+	let remainingGB = formatter.string(from: NSNumber(value:(totalFloat-usedFloat) / 1024))! + " GB"
 	
 	// Calculate remaining days, by getting this months range
 	let interval = Calendar.current.dateInterval(of: .month, for: Date())!

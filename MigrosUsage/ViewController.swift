@@ -74,8 +74,8 @@ class ViewController: UIViewController {
 			}
 			
 			self.usageLabel!.text = usageTextGB(totalFloat: data.total, usedFloat: data.used)
-			
-			let percentage = round((data.used / data.total) * 100)
+			let dataRemaing = data.total - data.used
+			let percentage = round((dataRemaing / data.total) * 100)
 			cv.shouldShowValueText = true
 			cv.startProgress(to: CGFloat(percentage), duration: 2.0)
 		}
